@@ -17,14 +17,6 @@ Tres sedes que compiten por las mismas búsquedas locales. Cada sede tiene su p�
 
 Trabajé con Claude Code (agentes planificador, implementador y revisor). Yo definí el alcance, la estructura por sedes y las decisiones de SEO, y revisé el resultado. Buena parte del código de las páginas lo generó la IA a partir de esas especificaciones. Este repositorio no incluye el historial anterior.
 
-## Estado y límites conocidos
-
-- Faltan los datos del titular en `aviso-legal` y `privacidad` (pendientes del cliente).
-- No hay `sitemap` ni `robots.txt`.
-- Hay mucha duplicación entre los componentes de cada sede; sería el primer refactor.
-- Algunas imágenes originales pesaban más de 1 MB sin optimizar.
-- Las imágenes y vídeos del cliente (incluyen personas) no están en el repositorio, así que en local la web se ve sin fotos.
-
 ## Ejecutar en local
 
 ```bash
