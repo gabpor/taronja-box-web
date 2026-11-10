@@ -1,0 +1,708 @@
+---
+// src/pages/about.astro
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Sobre Nosotros">
+  <main class="w-full bg-white pt-32 pb-24 px-8 md:px-16 lg:px-24">
+    <div class="max-w-5xl mx-auto">
+      <!-- Title Section -->
+      <section class="mb-12">
+        <span class="font-body text-xl text-accent font-medium mb-4 block">Sobre Nosotros</span>
+        <h1 class="font-display font-bold text-6xl md:text-8xl lg:text-[9rem] text-primary uppercase leading-[0.85]">
+          NUESTRA FILOSOFÍA
+        </h1>
+      </section>
+
+      <!-- Content Layout -->
+      <div class="w-full">
+        <div class="flex flex-col gap-8">
+
+          <!-- ── 1. INTRO ── -->
+          <div class="flex flex-col gap-5">
+            <p class="font-body text-xl md:text-2xl text-primary/80 leading-relaxed font-medium">
+              20 años trabajando al servicio de cuidar la salud de las personas, dan para mucho. Cada alumno, cada atleta, cada cliente que ha venido a vernos, nos ha dado la respuesta de por qué nos dedicamos a esto desde 2006.
+            </p>
+            <p class="font-body text-lg text-primary font-semibold leading-relaxed">
+              Ahora, ha llegado tu momento para subir de nivel.
+            </p>
+          </div>
+
+          <!-- ── 2. BLOQUE OBLIGATORIO (texto íntegro) ── -->
+          <div class="flex flex-col gap-5 mt-4">
+            <p class="font-body text-xl md:text-2xl text-primary/80 leading-relaxed font-medium">
+              Somos una agencia deportiva global, con servicios plenamente adaptados a las necesidades de cualquier persona que tenga como objetivo mejorar sus hábitos de salud.
+            </p>
+            <p class="font-body text-xl md:text-2xl text-primary/80 leading-relaxed font-medium">
+              Nuestra oferta es global, porque mimamos a nuestros alumnos desde dentro, dando como resultado una calidad de vida elevada al siguiente nivel.
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-6">
+            <h3 class="font-display font-bold text-3xl text-primary uppercase">Nuestras Sedes</h3>
+            <p class="font-body text-lg text-primary/70 leading-relaxed">
+              Nos puedes encontrar en 3 ubicaciones: Valencia, Massanassa y Moncada. 3 lugares y 15 profesionales que te pondrán a prueba mientras te diviertes en equipo. Trabajos físicos y específicos, individualizados y de grupo, psicología deportiva, nutrición y muchas actividades y eventos.
+            </p>
+            <p class="font-body text-lg text-primary/70 leading-relaxed">
+              También trabajamos proyectos personalizados desde nuestra consultoría: si quieres saber más sobre wellness corporativo, proyectos deportivos o eventos, no dudes en solicitarnos una llamada.
+            </p>
+          </div>
+
+          <!-- ── 3. NUESTRO LEMA ── -->
+          <div class="mt-8 flex flex-col md:flex-row md:items-start gap-6 md:gap-12">
+            <span class="font-body text-sm text-primary/40 uppercase tracking-widest md:pt-2 md:min-w-[120px] flex-shrink-0">
+              Nuestro Lema
+            </span>
+            <h3 class="font-display font-normal text-accent uppercase leading-tight" style="font-size: clamp(1.8rem, 3.5vw, 3rem);">
+              Haz sonreír a las personas, mientras les ayudas a sacar su máximo potencial.
+            </h3>
+          </div>
+
+          <!-- Párrafos pre-galería -->
+          <div class="flex flex-col gap-5 mt-4">
+            <p class="font-body text-lg text-primary/70 leading-relaxed">
+              Si fueras transparente, ¿serías más consciente de los beneficios de cuidar el cuerpo? Nos gusta pensar que lo eres, y nuestra misión es convencerte de que invertir tiempo en cuidar mente, cuerpo y espíritu, es el mejor regalo que te puedes dar.
+            </p>
+            <p class="font-body text-lg text-primary/70 leading-relaxed">
+              Te ayudamos a organizar tu agenda para que elijas bien qué, cuándo y cómo.
+            </p>
+            <p class="font-body text-lg text-primary font-bold leading-relaxed">
+              Más de 3000 personas han pasado por nuestros programas de entrenamiento. ¿Te atreves?
+            </p>
+          </div>
+
+          <!-- Photo Gallery Section -->
+          <section class="mt-12 pt-12 border-t border-primary/5">
+            <!-- Gallery Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+              <h2 class="font-display font-bold text-4xl sm:text-5xl md:text-6xl uppercase text-primary">
+                GALERÍA
+              </h2>
+              <p class="font-body text-sm text-primary/60 max-w-[280px] md:text-right leading-relaxed pb-1">
+                Momentos que definen nuestra comunidad, dentro y fuera del box.
+              </p>
+            </div>
+
+            <!-- Asymmetric Grid -->
+            <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-6 gap-4">
+              <!-- Item 1: Wide -->
+              <div class="md:col-span-4 aspect-[16/8] rounded-md overflow-hidden bg-gray-100">
+                <img 
+                  src="/images/panoramica-interior-clase-grupal-taronja-box.webp" 
+                  alt="Clase grupal de cross training en el interior de Taronja Box Valencia con alumnos entrenando" 
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  loading="lazy" decoding="async" width="1600" height="800"
+                />
+              </div>
+              <!-- Item 2: Narrow -->
+              <div class="md:col-span-2 aspect-[4/3] md:aspect-auto rounded-md overflow-hidden bg-gray-100">
+                <img 
+                  src="/images/atleta-snatch-exterior-competicion-taronja-box.webp" 
+                  alt="Atleta ejecutando snatch en competición outdoor de Taronja Box Valencia" 
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              
+              <!-- Row 2 -->
+              <!-- Item 3 -->
+              <div class="md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100">
+                <img 
+                  src="/images/comunidad-alumnos-box-taronja-box-valencia.webp" 
+                  alt="Comunidad de alumnos celebrando dentro del box de cross training Taronja Box Valencia" 
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <!-- Item 4 -->
+              <div class="md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100">
+                <img 
+                  src="/images/competicion-exterior-snatch-publico-taronja-box.webp" 
+                  alt="Competición de cross training al aire libre con público en evento de Taronja Box Valencia" 
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <!-- Item 5 -->
+              <div class="md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100">
+                <img 
+                  src="/images/competicion-exterior-barras-primer-plano-taronja-box.webp" 
+                  alt="Primer plano de atletas compitiendo con barras en evento outdoor de Taronja Box" 
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+
+              <!-- Row 3 -->
+              <!-- Item 6: Narrow -->
+              <div class="md:col-span-2 aspect-[4/3] md:aspect-auto rounded-md overflow-hidden bg-gray-100">
+                <img
+                  src="/images/podium-femenino-taronja-games-crossfit-competicion-valencia.webp"
+                  alt="Pódium femenino en los Taronja Games, competición de cross training organizada por Taronja Box Valencia"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <!-- Item 7: Wide -->
+              <div class="md:col-span-4 aspect-[16/6] rounded-md overflow-hidden bg-gray-100">
+                <img
+                  src="/images/comunidad-taronja-box-camisetas-naranjas-vista-aerea-crossfit.webp"
+                  alt="Comunidad de Taronja Box con camisetas naranjas vista desde arriba, box de cross training Valencia"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  loading="lazy" decoding="async" width="1600" height="600"
+                />
+              </div>
+
+              <!-- Extra Items (Hidden by default) -->
+              <div class="hidden md:col-span-3 aspect-[16/10] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img 
+                  src="/images/equipo-completo-interior-box-taronja-box.webp" 
+                  alt="Equipo completo de coaches y atletas de Taronja Box Valencia en el interior del box" 
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1600" height="1000"
+                />
+              </div>
+              <div class="hidden md:col-span-3 aspect-[16/10] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img 
+                  src="/images/equipo-team-building-terraza-taronja-box.webp" 
+                  alt="Equipo de Taronja Box en actividad de team building, comunidad cross training Valencia" 
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1600" height="1000"
+                />
+              </div>
+              <div class="hidden md:col-span-2 aspect-[4/5] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img 
+                  src="/images/atleta-femenina-clean-interior-taronja-box.webp" 
+                  alt="Atleta femenina realizando clean con barra olímpica en Taronja Box Valencia" 
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="1500"
+                />
+              </div>
+              <div class="hidden md:col-span-4 aspect-[16/8] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/comunidad-disfraces-evento-taronja-box.webp"
+                  alt="Comunidad de Taronja Box Valencia disfrazada en evento festivo dentro del box"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1600" height="800"
+                />
+              </div>
+              <div class="hidden md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/photocall-taronja-games-camara-evento.webp"
+                  alt="Photocall con cámara en evento Taronja Games de Taronja Box Valencia"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/presentador-evento-microfono-taronja-box.webp"
+                  alt="Presentador con micrófono en evento de Taronja Box Valencia"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/staff-registro-taronja-games-evento.webp"
+                  alt="Staff en mesa de registro del evento Taronja Games de Taronja Box"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-4 aspect-[16/8] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-box-coaches-pizarra-wod-programacion-crosstraining-valencia.webp"
+                  alt="Coaches de Taronja Box ante la pizarra con programación WOD de crosstraining"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1600" height="800"
+                />
+              </div>
+              <div class="hidden md:col-span-3 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-box-atleta-sudadera-logo-entrenamiento-funcional-valencia.webp"
+                  alt="Atleta con sudadera del logo de Taronja Box en entrenamiento funcional Valencia"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-3 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-box-atleta-comunidad-salto-alegria-entrenamiento-funcional-valencia.webp"
+                  alt="Atleta saltando de alegría en comunidad de entrenamiento funcional de Taronja Box Valencia"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/competicion-exterior-atletas-taronja-box.webp"
+                  alt="Atletas en competición exterior de Taronja Box Valencia"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-4 aspect-[16/8] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-box-mujeres-descanso-rig-entrenamiento-funcional-valencia.webp"
+                  alt="Mujeres descansando en el rig durante entrenamiento funcional en Taronja Box Valencia"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1600" height="800"
+                />
+              </div>
+
+              <!-- Imágenes liberadas de componentes de sede -->
+              <div class="hidden md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/clase-grupal-crossfit-handstand-taronja-box.webp"
+                  alt="Clase grupal de cross training con handstand push-ups en Taronja Box Valencia"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/atleta-muscle-up-rig-taronja-box.webp"
+                  alt="Atleta realizando muscle-up en rig de Taronja Box"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/atleta-tatuajes-pull-up-bar-taronja-box.webp"
+                  alt="Atleta con tatuajes en barra de pull-ups en Taronja Box"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-3 aspect-[16/10] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/clase-gimnasticos-wall-walk-taronja-box.webp"
+                  alt="Clase de gimnásticos con wall walks en Taronja Box"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1600" height="1000"
+                />
+              </div>
+              <div class="hidden md:col-span-3 aspect-[16/10] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/clase-grupal-vista-general-taronja-box.webp"
+                  alt="Vista general de clase grupal en Taronja Box"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1600" height="1000"
+                />
+              </div>
+              <div class="hidden md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/atleta-overhead-barra-ruster-taronja-box.webp"
+                  alt="Atleta con barra overhead en ruster en Taronja Box Valencia"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-4 aspect-[16/8] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-box-valencia-assault-bike-equipo-crosstraining.webp"
+                  alt="Equipo en assault bike de crosstraining en Taronja Box Valencia"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1600" height="800"
+                />
+              </div>
+              <div class="hidden md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-box-mujeres-back-squat-barra-clase-wod-valencia.webp"
+                  alt="Mujeres en back squat con barra en clase WOD en Taronja Box Valencia"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-box-mujeres-kettlebell-front-rack-clase-wod-entrenamiento.webp"
+                  alt="Mujeres con kettlebell en front rack en clase WOD de Taronja Box"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/entrenamiento-personal-trx-taronja-box.webp"
+                  alt="Sesión de entrenamiento personal con TRX en Taronja Box Valencia"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-3 aspect-[16/10] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/entrenamiento-personal-balon-medicinal-taronja-box.webp"
+                  alt="Sesión de entrenamiento personal con balón medicinal en Taronja Box Valencia"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1600" height="1000"
+                />
+              </div>
+              <div class="hidden md:col-span-3 aspect-[16/10] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-box-pizarra-wod-amrap-emom-programacion-exterior-crosstraining.webp"
+                  alt="Pizarra WOD con programación AMRAP y EMOM en exterior de crosstraining Taronja Box"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1600" height="1000"
+                />
+              </div>
+              <div class="hidden md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-box-coach-camiseta-logo-clase-crosstraining-valencia.webp"
+                  alt="Coach con camiseta del logo de Taronja Box en clase de crosstraining Valencia"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-box-coach-camiseta-logo-rig-interior-crosstraining-valencia.webp"
+                  alt="Coach con camiseta del logo en rig interior de crosstraining en Taronja Box Valencia"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-box-coach-camiseta-logo-supervision-clase-crosstraining-interior.webp"
+                  alt="Coach supervisando clase de crosstraining en interior de Taronja Box Valencia"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-4 aspect-[16/8] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-box-valencia-mujeres-descanso-clase-crosstraining.webp"
+                  alt="Mujeres descansando tras clase de crosstraining en Taronja Box Valencia"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1600" height="800"
+                />
+              </div>
+              <div class="hidden md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-box-valencia-barra-bumper-plate-halterofilia-crosstraining.webp"
+                  alt="Barra y bumper plates de halterofilia en Taronja Box Valencia"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-box-pizarra-wod-programacion-amrap-emom-crosstraining-valencia.webp"
+                  alt="Pizarra con programación WOD AMRAP y EMOM en Taronja Box Valencia"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/entrada-box-entreno-personal-taronja-box.webp"
+                  alt="Entrada del box de entrenamiento personal en Taronja Box"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-4 aspect-[16/8] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-box-instalaciones-box-entrenamiento-funcional-valencia.webp"
+                  alt="Instalaciones completas del box de entrenamiento funcional en Taronja Box Valencia"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1600" height="800"
+                />
+              </div>
+              <div class="hidden md:col-span-3 aspect-[16/10] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-box-coach-camiseta-logo-discos-bumper-plate-halterofilia.webp"
+                  alt="Coach con camiseta del logo junto a discos bumper plate de halterofilia en Taronja Box"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1600" height="1000"
+                />
+              </div>
+              <div class="hidden md:col-span-3 aspect-[16/10] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-box-valencia-disco-bumper-plate-halterofilia.webp"
+                  alt="Disco bumper plate de halterofilia en Taronja Box Valencia"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1600" height="1000"
+                />
+              </div>
+              <div class="hidden md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-box-coach-entrenamiento-personalizado-padel-valencia.webp"
+                  alt="Coach en entrenamiento personalizado para pádel en Taronja Box Valencia"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+
+              <!-- Nuevas: Spartan Race / eventos externos / institucional -->
+              <div class="hidden md:col-span-3 aspect-[16/10] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/equipo-taronja-box-spartan-race-carrera-obstaculos-valencia.webp"
+                  alt="Equipo de Taronja Box participando en la Spartan Race, carrera de obstáculos en Valencia"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1600" height="1000"
+                />
+              </div>
+              <div class="hidden md:col-span-3 aspect-[16/10] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-box-seleccion-deportiva-valenciana-fer-evento-institucional.webp"
+                  alt="Taronja Box junto a la selección deportiva valenciana en evento institucional de la FER"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1600" height="1000"
+                />
+              </div>
+              <div class="hidden md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/atleta-taronja-box-medalla-spartan-race-competicion-barro.webp"
+                  alt="Atleta de Taronja Box con medalla Spartan Race tras competición en barro"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/coaches-taronja-box-spartan-race-evento-deportivo-exterior.webp"
+                  alt="Coaches de Taronja Box en la Spartan Race, evento deportivo exterior"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+
+              <!-- Nuevas: Taronja Games exterior -->
+              <div class="hidden md:col-span-4 aspect-[16/8] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-games-instalacion-exterior-pista-crossfit-publico.webp"
+                  alt="Instalación exterior de los Taronja Games con pista de cross training y público asistente"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1600" height="800"
+                />
+              </div>
+              <div class="hidden md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-games-montaje-rig-exterior-crossfit-equipo-voluntarios.webp"
+                  alt="Montaje del rig exterior para los Taronja Games con equipo de voluntarios de Taronja Box"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-games-pista-exterior-vista-aerea-competicion-crossfit.webp"
+                  alt="Vista aérea de la pista exterior de los Taronja Games, competición de cross training Valencia"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-games-workout-playa-barras-crossfit-competicion-exterior.webp"
+                  alt="Workout en playa con barras en los Taronja Games, competición exterior de cross training"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+
+              <!-- Taronja Games Moncada 2026 -->
+              <div class="hidden md:col-span-4 aspect-[16/8] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-games-moncada-2026-wod4-atleta-intermedio-crossfit-taronja-box.webp"
+                  alt="Atletas levantando discos overhead en los Taronja Games Moncada 2026, competición cross training exterior"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-games-moncada-2026-wod1-competicion-experience-taronja-box.webp"
+                  alt="Atletas en pull-ups durante los Taronja Games Moncada 2026 en Taronja Box"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-games-moncada-2026-wod1-accion-experience-crossfit-valencia.webp"
+                  alt="Atletas con discos Ruster overhead en los Taronja Games Moncada 2026 cross training Valencia"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-games-moncada-2026-wod1-grupo-experience-crossfit-moncada.webp"
+                  alt="Atletas en toes-to-bar sobre el rig en los Taronja Games Moncada 2026"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-3 aspect-[16/10] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-games-moncada-2026-wod1-atleta-experience-crossfit.webp"
+                  alt="Grupo de atletas sobre bumper plates en la pista exterior de los Taronja Games Moncada 2026"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-3 aspect-[16/10] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-games-moncada-2026-wod1-atleta-experience-crossfit-moncada.webp"
+                  alt="Comunidad con camiseta Más Risas que Reps sobre bumper plates en los Taronja Games Moncada 2026"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-games-moncada-2026-wod2-atleta-experience-crossfit-moncada.webp"
+                  alt="Atleta en box jump durante los Taronja Games Moncada 2026 cross training"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-games-moncada-2026-wod2-atleta-intermedio-crossfit-moncada.webp"
+                  alt="Celebración high-five frente a Taronja Box Moncada en los Taronja Games 2026"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-games-moncada-2026-wod1-atleta-intermedio-crossfit-taronja-box.webp"
+                  alt="Atleta con wall ball en los Taronja Games Moncada 2026 con público"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+
+              <!-- Nuevas: clases y atletas de cross training -->
+              <div class="hidden md:col-span-4 aspect-[16/8] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/taronja-box-coach-dirigiendo-clase-burpees-crossfit-valencia.webp"
+                  alt="Coach de Taronja Box dirigiendo clase de cross training con burpees en Valencia"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1600" height="800"
+                />
+              </div>
+              <div class="hidden md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/atleta-femenina-handstand-push-up-pared-crossfit-taronja-box.webp"
+                  alt="Atleta femenina realizando handstand push-up contra la pared en Taronja Box"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/atleta-overhead-press-disco-logo-taronja-box-crossfit-valencia.webp"
+                  alt="Atleta realizando overhead press con disco junto al logo de Taronja Box en Valencia"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-2 aspect-[4/3] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/atleta-femenina-clean-barra-ruster-crossfit-taronja-box.webp"
+                  alt="Atleta femenina realizando clean con barra Ruster en clase de cross training Taronja Box"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1200" height="900"
+                />
+              </div>
+              <div class="hidden md:col-span-4 aspect-[16/8] rounded-md overflow-hidden bg-gray-100 extra-item opacity-0 translate-y-4 transition-all duration-500 cursor-pointer group/item">
+                <img
+                  src="/images/clase-grupal-clean-barra-con-coach-crossfit-taronja-box.webp"
+                  alt="Clase grupal de clean con barra supervisada por coach en Taronja Box cross training Valencia"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 gallery-img"
+                  loading="lazy" decoding="async" width="1600" height="800"
+                />
+              </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="mt-12 flex justify-center">
+              <button 
+                id="load-more-btn"
+                class="group flex items-center gap-3 px-8 py-4 border border-primary/10 hover:border-accent/40 text-primary/60 hover:text-accent font-body font-bold text-sm uppercase tracking-widest transition-all duration-300"
+              >
+                <span id="btn-text">Ver más imágenes</span>
+                <svg id="btn-icon" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>
+              </button>
+            </div>
+          </section>
+
+          <!-- Lightbox / Modal -->
+          <div id="lightbox" class="fixed inset-0 z-[100] bg-primary/95 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-4 md:p-12">
+            <button id="lightbox-close" class="absolute top-6 right-6 text-white/50 hover:text-white transition-colors">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <img id="lightbox-img" src="" alt="Full size" class="max-w-full max-h-full object-contain rounded-sm shadow-2xl scale-95 transition-transform duration-300" />
+          </div>
+
+          <script>
+            // --- Toggle Gallery Logic ---
+            const btn = document.getElementById('load-more-btn');
+            const btnText = document.getElementById('btn-text');
+            const btnIcon = document.getElementById('btn-icon');
+            const extraItems = document.querySelectorAll('.extra-item');
+            let isOpen = false;
+
+            btn?.addEventListener('click', () => {
+              isOpen = !isOpen;
+              extraItems.forEach((item, index) => {
+                if (isOpen) {
+                  item.classList.remove('hidden');
+                  setTimeout(() => item.classList.remove('opacity-0', 'translate-y-4'), index * 100);
+                } else {
+                  item.classList.add('opacity-0', 'translate-y-4');
+                  setTimeout(() => item.classList.add('hidden'), 500);
+                }
+              });
+              if (btnText) btnText.textContent = isOpen ? 'Ver menos imágenes' : 'Ver más imágenes';
+              if (btnIcon) isOpen ? btnIcon.classList.add('rotate-180') : btnIcon.classList.remove('rotate-180');
+            });
+
+            // --- Lightbox Logic ---
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement;
+            const lightboxClose = document.getElementById('lightbox-close');
+            const galleryImages = document.querySelectorAll('.gallery-img, .md\\:col-span-4 img, .md\\:col-span-2 img');
+
+            galleryImages.forEach(img => {
+              img.parentElement?.classList.add('cursor-pointer');
+              img.addEventListener('click', () => {
+                const src = (img as HTMLImageElement).src;
+                if (lightbox && lightboxImg) {
+                  lightboxImg.src = src;
+                  lightbox.classList.remove('opacity-0', 'pointer-events-none');
+                  setTimeout(() => lightboxImg.classList.remove('scale-95'), 10);
+                }
+              });
+            });
+
+            const closeLightbox = () => {
+              if (lightbox && lightboxImg) {
+                lightbox.classList.add('opacity-0', 'pointer-events-none');
+                lightboxImg.classList.add('scale-95');
+              }
+            };
+
+            lightboxClose?.addEventListener('click', closeLightbox);
+            lightbox?.addEventListener('click', (e) => {
+              if (e.target === lightbox) closeLightbox();
+            });
+          </script>
+          </section>
+          
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

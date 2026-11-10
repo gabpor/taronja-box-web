@@ -1,0 +1,35 @@
+# Build outputs
+dist/
+.output/
+
+# Node
+node_modules/
+
+# Astro
+.astro/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# Despliegues y artefactos de build
+*.zip
+taronja-box-hostinger-update/
+
+# Material interno del cliente y de trabajo con agentes
+.claude/
+BUSINESS_CONTEXT.md
+CONTEXT.md
+
+# Imágenes y vídeos del cliente (personas, menores): fuera del repositorio
+public/images/
+*.mp4
+
+# Temporales de Cloudflare Wrangler y de herramientas locales
+.wrangler/
+.claudeignore

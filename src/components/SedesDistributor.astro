@@ -1,0 +1,76 @@
+---
+// src/components/SedesDistributor.astro
+---
+<section id="sedes" class="w-full bg-white text-primary pb-16 md:pb-24 px-4 md:px-8 lg:px-24 xl:px-32 flex flex-col items-center">
+    <!-- Section Title -->
+    <h3 class="font-display font-bold text-5xl md:text-7xl uppercase text-primary mb-4 text-left md:text-center pt-16 md:pt-16 w-full">
+        BOXES Y HORARIOS
+    </h3>
+    <p class="font-body text-sm md:text-base lg:text-lg text-primary/70 leading-relaxed max-w-3xl text-left md:text-center mb-12">
+        Nos puedes encontrar en 3 ubicaciones: Valencia, Massanassa y Moncada. 3 lugares preparadísimos para que entrenes fuerza, técnica, salud y comunidad.
+    </p>
+
+    <!-- Cards Grid - Now scrollable on mobile -->
+    <div class="w-full max-w-[1400px] flex md:grid md:grid-cols-3 gap-4 md:gap-6 lg:gap-12 overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-6 md:pb-0 scroll-smooth md:px-0 hide-scrollbar">
+        
+        <!-- VALENCIA -->
+        <a href="/valencia" class="group flex flex-col w-[66vw] sm:w-[400px] md:w-full flex-shrink-0 snap-center cursor-pointer border border-transparent hover:border-accent transition-all duration-300 shadow-md hover:shadow-lg bg-white">
+            <div class="relative w-full aspect-[4/5] overflow-hidden bg-primary-dark">
+                <img 
+                    src="/images/box-valencia.webp" 
+                    alt="Box Valencia" 
+                    class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                />
+            </div>
+            <div class="p-5 md:p-6 flex flex-col justify-center">
+                <h4 class="font-display font-bold text-2xl lg:text-3xl uppercase text-primary-dark text-center">
+                    VALENCIA
+                </h4>
+            </div>
+        </a>
+
+        <!-- MASSANASSA -->
+        <a href="/massanassa" class="group flex flex-col w-[66vw] sm:w-[400px] md:w-full flex-shrink-0 snap-center cursor-pointer border border-transparent hover:border-accent transition-all duration-300 shadow-md hover:shadow-lg bg-white">
+            <div class="relative w-full aspect-[4/5] overflow-hidden bg-primary-dark">
+                <img 
+                    src="/images/box-massanassa.webp" 
+                    alt="Box Massanassa" 
+                    class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                />
+            </div>
+            <div class="p-5 md:p-6 flex flex-col justify-center">
+                <h4 class="font-display font-bold text-2xl lg:text-3xl uppercase text-primary-dark text-center">
+                    MASSANASSA
+                </h4>
+            </div>
+        </a>
+
+        <!-- MONCADA -->
+        <a href="/moncada" class="group flex flex-col w-[66vw] sm:w-[400px] md:w-full flex-shrink-0 snap-center cursor-pointer border border-transparent hover:border-accent transition-all duration-300 shadow-md hover:shadow-lg bg-white">
+            <div class="relative w-full aspect-[4/5] overflow-hidden bg-primary-dark">
+                <img 
+                    src="/images/box-moncada.webp" 
+                    alt="Box Moncada" 
+                    class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                />
+            </div>
+            <div class="p-5 md:p-6 flex flex-col justify-center">
+                <h4 class="font-display font-bold text-2xl lg:text-3xl uppercase text-primary-dark text-center">
+                    MONCADA
+                </h4>
+            </div>
+        </a>
+
+    </div>
+</section>
+
+<style>
+    /* Ocultar la barra de scroll de forma limpia, pero permitiendo el deslizamiento nativo */
+    .hide-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none;    /* Firefox */
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;            /* Chrome, Safari and Opera */
+    }
+</style>

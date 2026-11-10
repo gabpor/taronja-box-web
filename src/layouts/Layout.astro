@@ -1,0 +1,106 @@
+---
+// src/layouts/Layout.astro
+// Layout base de Taronja Box — Dark Taronja design system
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import LocationBanner from '../components/LocationBanner.astro';
+import PromoPopup from '../components/PromoPopup.astro';
+
+export interface Props {
+  title: string;
+  description?: string;
+  canonicalUrl?: string;
+  /** Mostrar el banner de sugerencia de sede (activo en home). */
+  showLocationBanner?: boolean;
+}
+
+const {
+  title,
+  description = 'Taronja Box — Hub de entrenamiento funcional y alto rendimiento en Valencia, Moncada y Massanasa.',
+  canonicalUrl = Astro.url.href,
+  showLocationBanner = false,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Preconnect a Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>{title.includes('Taronja Box') ? title : `Taronja Box | ${title}`}</title>
+    <link rel="icon" type="image/webp" href="/images/logo.webp" />
+
+    <!-- Datos estructurados globales (Organization + WebSite) — cada landing local
+         referencia "https://taronjabox.com/#organization" vía parentOrganization -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://taronjabox.com/#organization",
+          "name": "Taronja Box",
+          "url": "https://taronjabox.com",
+          "logo": "https://taronjabox.com/images/logo.webp",
+          "sameAs": [
+            "https://www.instagram.com/taronjabox_valencia/",
+            "https://www.instagram.com/taronjabox_moncada/",
+            "https://www.instagram.com/taronjabox_massanassa/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://taronjabox.com/#website",
+          "url": "https://taronjabox.com",
+          "name": "Taronja Box",
+          "publisher": { "@id": "https://taronjabox.com/#organization" }
+        }
+      ]
+    })} />
+
+    <!-- Slot para datos estructurados JSON-LD específicos de cada página -->
+    <slot name="head" />
+
+    <!-- Open Graph -->
+    <meta property="og:type"        content="website" />
+    <meta property="og:title"       content={title.includes('Taronja Box') ? title : `Taronja Box | ${title}`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url"         content={canonicalUrl} />
+    <meta property="og:image"       content="https://taronjabox.com/images/og-taronja-box.jpg" />
+    <meta property="og:image:type"  content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="1200" />
+    <meta name="twitter:card"       content="summary_large_image" />
+    <meta name="twitter:image"      content="https://taronjabox.com/images/og-taronja-box.jpg" />
+  </head>
+
+  <body class="bg-primary text-white font-sans antialiased min-h-screen flex flex-col overflow-x-hidden">
+    <!-- Header global — sticky, SSR, siempre presente -->
+    <Header />
+
+    <!-- Banner de sede sugerida (resuelto client-side vía geo-IP) — solo en páginas con showLocationBanner=true -->
+    {showLocationBanner && <LocationBanner />}
+
+    <!-- Contenido de la página -->
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <!-- Footer global — estático para SEO -->
+    <Footer />
+
+    <!-- Promo Popup global — interactivo -->
+    <PromoPopup />
+  </body>
+</html>

@@ -1,0 +1,215 @@
+---
+// src/components/PricingSection.astro
+---
+<section id="precios" class="w-full bg-white pb-16 pt-0 px-4 md:px-8 lg:px-24 xl:px-32 flex flex-col items-start overflow-hidden">
+    
+    <!-- TOP HEADER -->
+    <div class="w-full py-10 flex flex-col items-start text-left leading-none">
+        <h2 class="font-display font-bold text-5xl md:text-7xl uppercase text-primary mb-4">
+            TARIFAS
+        </h2>
+    </div>
+
+    <!-- 1. CROSSTRAINING SECTION (Cards + Ilimitada) -->
+    <div class="w-full mb-16 flex flex-col items-start">
+        <h3 class="font-display font-bold text-3xl md:text-4xl uppercase text-accent mb-6 text-left relative">
+            CROSSTRAINING
+            <span class="absolute -bottom-1.5 left-0 w-10 h-1 bg-accent rounded-full"></span>
+        </h3>
+        
+        <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch mb-6">
+            <!-- INICIACIÓN -->
+            <div class="bg-white border border-gray-100 p-6 flex flex-col items-center text-center rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <h4 class="font-display font-bold text-3xl uppercase text-primary mb-1 leading-none">INICIACIÓN</h4>
+                <p class="font-body text-xs text-gray-500 mb-4 font-medium">Ideal para empezar: 2 días por semana</p>
+                <div class="flex items-baseline gap-1 mb-4 text-primary font-display font-bold">
+                    <span class="text-5xl">€ 55</span>
+                    <span class="font-body font-bold text-xs">/ mes</span>
+                </div>
+                <ul class="flex flex-col gap-3 mb-6 w-full items-center">
+                    <li class="flex items-center gap-2 font-body font-bold text-primary text-base">
+                        <div class="w-4 h-4 rounded-full bg-accent/10 flex items-center justify-center text-accent">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        8 sesiones
+                    </li>
+                </ul>
+                <button class="mt-auto w-full py-2.5 bg-accent/5 border border-accent/20 text-accent font-body font-bold uppercase text-[10px] rounded-lg hover:bg-accent hover:text-white transition-all">Elegir plan</button>
+            </div>
+
+            <!-- PROFESIONAL -->
+            <div class="bg-white border-2 border-accent p-6 flex flex-col items-center text-center rounded-xl relative shadow-lg transform z-10 py-8">
+                <div class="absolute -top-3 bg-primary text-white text-[9px] uppercase font-bold px-3 py-1 rounded-full tracking-wider shadow-md">El más popular</div>
+                <h4 class="font-display font-bold text-3xl uppercase text-primary mb-1 leading-none">PROFESIONAL</h4>
+                <p class="font-body text-xs text-gray-500 mb-4 font-medium">Equilibrado: 4 días por semana</p>
+                <div class="flex items-baseline gap-1 mb-4 text-primary font-display font-bold">
+                    <span class="text-5xl">€ 75</span>
+                    <span class="font-body font-bold text-xs">/ mes</span>
+                </div>
+                <ul class="flex flex-col gap-3 mb-6 w-full items-center">
+                    <li class="flex items-center gap-2 font-body font-bold text-primary text-base">
+                        <div class="w-4 h-4 rounded-full bg-accent/10 flex items-center justify-center text-accent">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        16 sesiones
+                    </li>
+                </ul>
+                <button class="mt-auto w-full py-3 bg-accent text-white font-body font-bold uppercase text-xs rounded-lg hover:brightness-110 transition-all shadow-sm">Elegir plan</button>
+            </div>
+
+            <!-- AMATEUR -->
+            <div class="bg-white border border-gray-100 p-6 flex flex-col items-center text-center rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <h4 class="font-display font-bold text-3xl uppercase text-primary mb-1 leading-none">AMATEUR</h4>
+                <p class="font-body text-xs text-gray-500 mb-4 font-medium">Constante: 3 días por semana</p>
+                <div class="flex items-baseline gap-1 mb-4 text-primary font-display font-bold">
+                    <span class="text-5xl">€ 65</span>
+                    <span class="font-body font-bold text-xs">/ mes</span>
+                </div>
+                <ul class="flex flex-col gap-3 mb-6 w-full items-center">
+                    <li class="flex items-center gap-2 font-body font-bold text-primary text-base">
+                        <div class="w-4 h-4 rounded-full bg-accent/10 flex items-center justify-center text-accent">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        12 sesiones
+                    </li>
+                </ul>
+                <button class="mt-auto w-full py-2.5 bg-accent/5 border border-accent/20 text-accent font-body font-bold uppercase text-[10px] rounded-lg hover:bg-accent hover:text-white transition-all">Elegir plan</button>
+            </div>
+        </div>
+
+        <!-- ILIMITADA (Dentro de Crosstraining) -->
+        <div class="w-full bg-[#f8fafc] border border-accent/10 p-6 md:p-8 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm overflow-hidden">
+            <div class="flex flex-col items-center md:items-start">
+                <h3 class="font-display font-bold text-4xl text-primary uppercase leading-none mb-2">ILIMITADA</h3>
+                <p class="font-body text-sm text-gray-600 max-w-[400px] text-center md:text-left leading-tight">Entrenamiento sin límites: ven cuando quieras y disfruta de todas las ventajas de Taronja Box.</p>
+            </div>
+            <div class="flex items-center gap-6">
+                <div class="flex items-baseline gap-1.5 text-primary font-display font-bold">
+                    <span class="text-5xl">€ 85</span>
+                    <span class="font-body font-bold text-base">/ mes</span>
+                </div>
+                <button class="bg-primary text-white px-8 py-2.5 rounded-full font-body font-bold uppercase text-xs hover:bg-accent transition-colors shadow-md">Elegir ilimitada</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEPARATOR -->
+    <div class="w-full h-px bg-gray-100 my-12"></div>
+
+    <!-- 2. PERSONAL SECTION (Cards + Express) -->
+    <div class="w-full mb-16 flex flex-col items-start">
+        <div class="w-full flex flex-row items-center justify-between md:justify-start gap-4 md:gap-12 mb-8">
+            <h3 class="font-display font-bold text-3xl md:text-4xl uppercase text-accent text-left relative">
+                PERSONAL
+                <span class="absolute -bottom-1.5 left-0 w-10 h-1 bg-accent rounded-full"></span>
+            </h3>
+            
+            <!-- Minute Toggle -->
+            <div class="flex bg-gray-100 p-1 rounded-xl shadow-inner scale-75 xs:scale-90 origin-right md:origin-left">
+                <button id="toggle-45" class="px-4 md:px-8 py-2 rounded-lg font-body font-bold text-xs md:text-sm transition-all text-gray-400 hover:text-primary" data-min="45">45 min</button>
+                <button id="toggle-60" class="px-4 md:px-8 py-2 rounded-lg font-body font-bold text-xs md:text-sm transition-all bg-white text-primary shadow-sm" data-min="60">60 min</button>
+            </div>
+        </div>
+
+        <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-6 items-start mb-6">
+            <!-- SESIÓN ÚNICA -->
+            <div class="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-white pt-6 pb-2 px-6 flex flex-col items-start">
+                    <h4 class="font-display font-bold text-3xl uppercase text-primary mb-0.5">SESIÓN ÚNICA</h4>
+                    <p class="font-body text-xs text-gray-500 font-medium">Entrenamiento individual</p>
+                </div>
+                <div class="p-6 flex flex-col items-start">
+                    <div class="flex items-baseline gap-1.5 text-primary mb-6 font-display font-bold">
+                        <span class="text-4xl price-value" data-p45="40" data-p60="50">€ 50</span>
+                        <span class="font-body font-bold text-xs">/ sesión</span>
+                    </div>
+                    <button class="w-full py-2.5 border-2 border-primary/10 text-primary font-body font-bold uppercase text-[10px] rounded-lg hover:bg-primary hover:text-white transition-all">Contactar</button>
+                </div>
+            </div>
+
+            <!-- PACK 5 SESIONES -->
+            <div class="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-white pt-6 pb-2 px-6 flex flex-col items-start">
+                    <h4 class="font-display font-bold text-3xl uppercase text-primary mb-0.5">PACK 5 SESIONES</h4>
+                    <p class="font-body text-xs text-gray-500 font-medium">Bono de entrenamiento</p>
+                </div>
+                <div class="p-6 flex flex-col items-start">
+                    <div class="flex items-baseline gap-1.5 text-primary mb-6 font-display font-bold">
+                        <span class="text-4xl price-value" data-p45="175" data-p60="225">€ 225</span>
+                        <span class="font-body font-bold text-xs">/ total</span>
+                    </div>
+                    <button class="w-full py-2.5 border-2 border-primary/10 text-primary font-body font-bold uppercase text-[10px] rounded-lg hover:bg-primary hover:text-white transition-all">Contactar</button>
+                </div>
+            </div>
+
+            <!-- PACK 10 SESIONES (Destacado) -->
+            <div class="bg-white border-2 border-accent rounded-2xl overflow-hidden shadow-md relative">
+                <div class="bg-white pt-6 pb-2 px-6 flex flex-col items-start border-b border-gray-50">
+                    <h4 class="font-display font-bold text-3xl uppercase text-primary mb-0.5">PACK 10 SESIONES</h4>
+                    <p class="font-body text-xs text-accent font-bold uppercase tracking-tight">El más eficiente</p>
+                </div>
+                <div class="p-6 flex flex-col items-start">
+                    <div class="flex items-baseline gap-1.5 text-primary mb-6 font-display font-bold">
+                        <span class="text-4xl price-value" data-p45="300" data-p60="400">€ 400</span>
+                        <span class="font-body font-bold text-xs">/ total</span>
+                    </div>
+                    <button class="w-full py-2.5 bg-accent text-white font-body font-bold uppercase text-[10px] rounded-lg hover:brightness-110 transition-all shadow-sm">Elegir pack</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- EXPRESS PACK (Dentro de Personal) -->
+        <div class="w-full bg-[#f8fafc] border border-accent/10 p-6 md:p-8 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm overflow-hidden">
+            <div class="flex flex-col items-center md:items-start">
+                <h3 class="font-display font-bold text-4xl text-primary uppercase leading-none mb-2">
+                    PACK EXPRESS - 10 SESIONES
+                </h3>
+                <p class="font-body text-sm text-gray-600 max-w-[400px] text-center md:text-left leading-tight">
+                    Ideal para personas con tiempo reducido. 30 min por sesión.
+                </p>
+            </div>
+            <div class="flex items-center gap-6">
+                <div class="flex items-baseline gap-1.5 text-primary font-display font-bold">
+                    <span class="text-5xl">€ 250</span>
+                    <span class="font-body font-bold text-base">/ total</span>
+                </div>
+                <button class="bg-primary text-white px-8 py-2.5 rounded-full font-body font-bold uppercase text-xs hover:bg-accent transition-colors shadow-md">Elegir pack</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    const btn45 = document.getElementById('toggle-45');
+    const btn60 = document.getElementById('toggle-60');
+    const prices = document.querySelectorAll('.price-value');
+
+    function updatePrices(minutes) {
+        if (minutes === '45') {
+            btn45.className = "px-8 py-2 rounded-lg font-body font-bold text-sm transition-all bg-white text-primary shadow-sm";
+            btn60.className = "px-8 py-2 rounded-lg font-body font-bold text-sm transition-all text-gray-400 hover:text-primary";
+        } else {
+            btn60.className = "px-8 py-2 rounded-lg font-body font-bold text-sm transition-all bg-white text-primary shadow-sm";
+            btn45.className = "px-8 py-2 rounded-lg font-body font-bold text-sm transition-all text-gray-400 hover:text-primary";
+        }
+
+        prices.forEach(price => {
+            const val = minutes === '45' ? (price as HTMLElement).dataset.p45 : (price as HTMLElement).dataset.p60;
+            price.textContent = `€ ${val}`;
+        });
+    }
+
+    btn45?.addEventListener('click', () => updatePrices('45'));
+    btn60?.addEventListener('click', () => updatePrices('60'));
+</script>
+
+<style>
+    .font-display { font-family: 'Bebas Neue', sans-serif; }
+    .font-body { font-family: 'Open Sans', sans-serif; }
+</style>

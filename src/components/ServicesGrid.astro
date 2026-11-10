@@ -1,0 +1,190 @@
+---
+// src/components/ServicesGrid.astro
+---
+<section id="servicios" class="w-full bg-white text-primary py-16 md:py-24 px-4 md:px-8 lg:px-24 xl:px-32 flex flex-col items-start overflow-hidden">
+    
+    <!-- Header Area -->
+    <div class="w-full flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div class="max-w-2xl">
+            <h3 class="font-display font-bold text-5xl md:text-7xl uppercase text-primary mb-6">
+                SERVICIOS
+            </h3>
+            <p class="font-body text-primary/70 text-sm md:text-base lg:text-lg leading-relaxed">
+                Entrena sin límites en cualquiera de nuestras sedes. Descubre Open Box y clases dirigidas, además de salud, recuperación y rendimiento para desbloquear tu máximo potencial.
+            </p>
+        </div>
+        
+        <!-- Navigation Buttons -->
+        <div class="hidden md:flex gap-4 pb-2">
+            <button id="services-prev" class="w-14 h-14 rounded-full border border-gray-300 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary hover:bg-gray-50 transition-colors cursor-pointer" aria-label="Previous slide">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 12H5M5 12L12 19M5 12L12 5" />
+                </svg>
+            </button>
+            <button id="services-next" class="w-14 h-14 rounded-full bg-accent flex items-center justify-center text-white hover:bg-[#c25e36] transition-colors shadow-sm hover:shadow-md cursor-pointer" aria-label="Next slide">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 12H19M19 12L12 5M19 12L12 19" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Slider Area -->
+    <div class="w-full relative">
+        <div id="services-slider" class="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-8 pt-2 scroll-smooth hide-scrollbar">
+            
+            <!-- Card 1: Clases Dirigidas (WOD) -->
+            <article class="flex-shrink-0 w-[60vw] md:w-[400px] lg:w-[450px] bg-white border border-accent/20 flex flex-col snap-center group cursor-pointer transition-shadow hover:shadow-md overflow-hidden">
+                <div class="w-full aspect-[4/3] overflow-hidden bg-primary-dark">
+                    <img src="/images/taronja-box-clase-grupo-wod-barra-entrenamiento-funcional-valencia.webp" alt="Clase dirigida WOD con barra en grupo en Taronja Box Valencia" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" decoding="async" width="1600" height="1200"/>
+                </div>
+                <div class="p-6 md:p-8 flex flex-col flex-grow">
+                    <span class="text-[10px] uppercase font-body tracking-widest text-primary/40 mb-3 font-bold">La esencia en grupo</span>
+                    <h4 class="text-3xl md:text-4xl font-display font-bold text-primary mb-4 transition-colors duration-300 group-hover:text-accent uppercase">Clases Dirigidas (WOD)</h4>
+                    <p class="hidden md:block font-body text-primary/60 text-sm leading-relaxed mb-8 flex-grow">
+                        El motor principal de Taronja Box. Sesiones de alta intensidad donde combinamos fuerza, gimnasia y resistencia bajo la supervisión de coaches expertos. Adaptable a cualquier nivel, desde tu primer día hasta la máxima competición.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Card 2: Open Box -->
+            <article class="flex-shrink-0 w-[60vw] md:w-[400px] lg:w-[450px] bg-white border border-accent/20 flex flex-col snap-center group cursor-pointer transition-shadow hover:shadow-md overflow-hidden">
+                <div class="w-full aspect-[4/3] overflow-hidden bg-primary-dark">
+                    <img src="/images/taronja-box-mujeres-open-box-entrenamiento-libre-valencia.webp" alt="Mujeres en entrenamiento open box libre en Taronja Box Valencia" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" decoding="async" width="1600" height="1200"/>
+                </div>
+                <div class="p-6 md:p-8 flex flex-col flex-grow">
+                    <span class="text-[10px] uppercase font-body tracking-widest text-primary/40 mb-3 font-bold">Flexibilidad total</span>
+                    <h4 class="text-3xl md:text-4xl font-display font-bold text-primary mb-4 transition-colors duration-300 group-hover:text-accent uppercase">Open Box</h4>
+                    <p class="hidden md:block font-body text-primary/60 text-sm leading-relaxed mb-8 flex-grow">
+                        Tu espacio, tus reglas. Disfruta de nuestras instalaciones totalmente equipadas con amplia flexibilidad horaria para entrenar a tu ritmo. El entorno ideal para seguir tu propia programación, mejorar la movilidad o recuperar un entrenamiento.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Card 3: Psicología Deportiva -->
+            <article class="flex-shrink-0 w-[60vw] md:w-[400px] lg:w-[450px] bg-white border border-accent/20 flex flex-col snap-center group cursor-pointer transition-shadow hover:shadow-md overflow-hidden">
+                <div class="w-full aspect-[4/3] overflow-hidden bg-primary-dark">
+                    <img src="/images/psicologia-deportiva.webp" alt="Psicología Deportiva" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" decoding="async" width="900" height="1600"/>
+                </div>
+                <div class="p-6 md:p-8 flex flex-col flex-grow">
+                    <span class="text-[10px] uppercase font-body tracking-widest text-primary/40 mb-3 font-bold">Entrena tu mente</span>
+                    <h4 class="text-3xl md:text-4xl font-display font-bold text-primary mb-4 transition-colors duration-300 group-hover:text-accent uppercase">Psicología Deportiva</h4>
+                    <p class="hidden md:block font-body text-primary/60 text-sm leading-relaxed mb-8 flex-grow">
+                        La mente también se entrena. La psicología deportiva te ayuda a mejorar la concentración, gestionar la presión y fortalecer tu confianza para rendir mejor dentro y fuera del deporte.
+                    </p>
+                </div>
+            </article>
+            
+            <!-- Card 4: Atención Personalizada -->
+            <article class="flex-shrink-0 w-[60vw] md:w-[400px] lg:w-[450px] bg-white border border-accent/20 flex flex-col snap-center group cursor-pointer transition-shadow hover:shadow-md overflow-hidden">
+                <div class="w-full aspect-[4/3] overflow-hidden bg-primary-dark">
+                    <img src="/images/taronja-box-coach-atleta-conversacion-rig-exterior-entrenamiento-funcional.webp" alt="Coach y atleta en sesión de entrenamiento personal en rig exterior de Taronja Box" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" decoding="async" width="1600" height="1200"/>
+                </div>
+                <div class="p-6 md:p-8 flex flex-col flex-grow">
+                    <span class="text-[10px] uppercase font-body tracking-widest text-primary/40 mb-3 font-bold">Sesiones 1x1 o grupos reducidos</span>
+                    <h4 class="text-3xl md:text-4xl font-display font-bold text-primary mb-4 transition-colors duration-300 group-hover:text-accent uppercase">Atención Personalizada</h4>
+                    <p class="hidden md:block font-body text-primary/60 text-sm leading-relaxed mb-8 flex-grow">
+                        Clases de entrenamiento personal adaptadas a tus objetivos. Puedes entrenar de forma individual o en grupos reducidos de hasta 4 personas, con sesiones dinámicas, guiadas y enfocadas en mejorar tu fuerza, resistencia y bienestar.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Card 5: Osteopatía -->
+            <article class="flex-shrink-0 w-[60vw] md:w-[400px] lg:w-[450px] bg-white border border-accent/20 flex flex-col snap-center group cursor-pointer transition-shadow hover:shadow-md overflow-hidden">
+                <div class="w-full aspect-[4/3] overflow-hidden bg-primary-dark">
+                    <img src="/images/osteopatia-masaje-terapia-manual-lumbar-taronja-box-valencia.webp" alt="Sesión de osteopatía y terapia manual lumbar en Taronja Box Valencia" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" decoding="async" width="1200" height="900"/>
+                </div>
+                <div class="p-6 md:p-8 flex flex-col flex-grow">
+                    <span class="text-[10px] uppercase font-body tracking-widest text-primary/40 mb-3 font-bold">Equilibrio y prevención</span>
+                    <h4 class="text-3xl md:text-4xl font-display font-bold text-primary mb-4 transition-colors duration-300 group-hover:text-accent uppercase">Osteopatía</h4>
+                    <p class="hidden md:block font-body text-primary/60 text-sm leading-relaxed mb-8 flex-grow">
+                        La osteopatía ayuda a mejorar el equilibrio del cuerpo, aliviar dolores y prevenir lesiones mediante técnicas manuales que favorecen la movilidad y el bienestar general.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Card 6: Acondicionamiento Físico para Pádel -->
+            <article class="flex-shrink-0 w-[60vw] md:w-[400px] lg:w-[450px] bg-white border border-accent/20 flex flex-col snap-center group cursor-pointer transition-shadow hover:shadow-md overflow-hidden">
+                <div class="w-full aspect-[4/3] overflow-hidden bg-primary-dark">
+                    <img src="/images/taronja-box-coach-entrenamiento-personalizado-padel-valencia.webp" alt="Coach en entrenamiento de acondicionamiento físico para pádel en Taronja Box Valencia" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" decoding="async" width="1600" height="1200"/>
+                </div>
+                <div class="p-6 md:p-8 flex flex-col flex-grow">
+                    <span class="text-[10px] uppercase font-body tracking-widest text-primary/40 mb-3 font-bold">Rendimiento en pista</span>
+                    <h4 class="text-3xl md:text-4xl font-display font-bold text-primary mb-4 transition-colors duration-300 group-hover:text-accent uppercase">Acondicionamiento Físico para Pádel</h4>
+                    <p class="hidden md:block font-body text-primary/60 text-sm leading-relaxed mb-8 flex-grow">
+                        Entrenamiento de acondicionamiento físico pensado para jugadores de pádel. Se trabaja fuerza, velocidad, agilidad y resistencia para mejorar el rendimiento en pista y prevenir lesiones.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Card 7: Fisioterapia -->
+            <article class="flex-shrink-0 w-[60vw] md:w-[400px] lg:w-[450px] bg-white border border-accent/20 flex flex-col snap-center group cursor-pointer transition-shadow hover:shadow-md overflow-hidden">
+                <div class="w-full aspect-[4/3] overflow-hidden bg-primary-dark">
+                    <img src="/images/fisioterapia-tecnica-ultrasonido-rodilla-deportista-taronja-box-valencia.webp" alt="Fisioterapeuta aplicando ultrasonido terapéutico en rodilla de deportista en Taronja Box Valencia" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" decoding="async" width="1200" height="900"/>
+                </div>
+                <div class="p-6 md:p-8 flex flex-col flex-grow">
+                    <span class="text-[10px] uppercase font-body tracking-widest text-primary/40 mb-3 font-bold">Recuperación y salud</span>
+                    <h4 class="text-3xl md:text-4xl font-display font-bold text-primary mb-4 transition-colors duration-300 group-hover:text-accent uppercase">Fisioterapia</h4>
+                    <p class="hidden md:block font-body text-primary/60 text-sm leading-relaxed mb-8 flex-grow">
+                        La fisioterapia ayuda a recuperar lesiones, aliviar dolores y mejorar la movilidad mediante tratamientos personalizados que favorecen la salud y el rendimiento físico.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Card 8: Especialidades -->
+            <article class="flex-shrink-0 w-[60vw] md:w-[400px] lg:w-[450px] bg-white border border-accent/20 flex flex-col snap-center group cursor-pointer transition-shadow hover:shadow-md overflow-hidden">
+                <div class="w-full aspect-[4/3] overflow-hidden bg-primary-dark">
+                    <img src="/images/atleta-femenina-overhead-anilla-rig-crossfit-taronja-box.webp" alt="Atleta femenina en anillas durante clase de especialidades de entrenamiento funcional en Taronja Box Valencia" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" decoding="async" width="1600" height="1200"/>
+                </div>
+                <div class="p-6 md:p-8 flex flex-col flex-grow">
+                    <span class="text-[10px] uppercase font-body tracking-widest text-primary/40 mb-3 font-bold">Pulir detalles</span>
+                    <h4 class="text-3xl md:text-4xl font-display font-bold text-primary mb-4 transition-colors duration-300 group-hover:text-accent uppercase">Especialidades</h4>
+                    <p class="hidden md:block font-body text-primary/60 text-sm leading-relaxed mb-8 flex-grow">
+                        Domina cada aspecto del fitness con nuestras clases específicas. Desde Weightlifting para ganar fuerza y potencia, hasta Gymnastics para mejorar tu control corporal. La opción perfecta para enfocarte en tus puntos débiles y convertirlos en fortalezas.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="mt-2 border-t border-primary/5 pt-4 w-full">
+        <p class="font-body text-xs md:text-sm text-primary/40 leading-relaxed italic max-w-4xl">
+            * La disponibilidad de los servicios puede variar según la ubicación. Te recomendamos consultar las páginas específicas de cada sede para confirmar la oferta disponible en tu centro de preferencia.
+        </p>
+    </div>
+</section>
+
+<style>
+    /* Ocultar la barra de scroll de forma limpia, pero permitiendo el deslizamiento nativo */
+    .hide-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none;    /* Firefox */
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;            /* Chrome, Safari and Opera */
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const slider = document.getElementById('services-slider');
+        const prevBtn = document.getElementById('services-prev');
+        const nextBtn = document.getElementById('services-next');
+
+        if (slider && prevBtn && nextBtn) {
+            // Event listener setup for smooth horizontal scrolling 
+            prevBtn.addEventListener('click', () => {
+                // Determine scroll distance depending on card + gap width
+                const scrollAmount = slider.firstElementChild.clientWidth + 24; 
+                slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            });
+            
+            nextBtn.addEventListener('click', () => {
+                const scrollAmount = slider.firstElementChild.clientWidth + 24;
+                slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            });
+        }
+    });
+</script>

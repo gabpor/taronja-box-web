@@ -1,0 +1,133 @@
+---
+// src/components/ValenciaServices.astro
+---
+<section id="servicios" class="w-full bg-white text-primary py-16 md:py-24 px-4 md:px-8 lg:px-24 xl:px-32 flex flex-col items-start overflow-hidden">
+    
+    <!-- Header Area -->
+    <div class="w-full flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div class="max-w-2xl">
+            <h3 class="font-display font-bold text-5xl md:text-7xl uppercase text-primary mb-6">
+                SERVICIOS
+            </h3>
+            <p class="font-body text-primary/70 text-lg md:text-xl leading-relaxed">
+                Descubre todo lo que Taronja Box Valencia tiene preparado para ti. Desde el entrenamiento más intenso hasta el cuidado de tu recuperación.
+            </p>
+        </div>
+        
+        <!-- Navigation Buttons -->
+        <div class="hidden md:flex gap-4 pb-2">
+            <button id="services-prev" class="w-14 h-14 rounded-full border border-gray-300 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary hover:bg-gray-50 transition-colors cursor-pointer" aria-label="Previous slide">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 12H5M5 12L12 19M5 12L12 5" />
+                </svg>
+            </button>
+            <button id="services-next" class="w-14 h-14 rounded-full bg-accent flex items-center justify-center text-white hover:bg-[#c25e36] transition-colors shadow-sm hover:shadow-md cursor-pointer" aria-label="Next slide">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 12H19M19 12L12 5M19 12L12 19" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Slider Area -->
+    <div class="w-full relative">
+        <div id="services-slider" class="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-8 pt-2 scroll-smooth hide-scrollbar">
+            
+            <!-- Card 1: Clases WOD -->
+            <article class="flex-shrink-0 w-[60vw] md:w-[400px] lg:w-[450px] bg-white border border-accent/20 flex flex-col snap-center group cursor-pointer transition-shadow hover:shadow-md overflow-hidden">
+                <div class="w-full aspect-[4/3] overflow-hidden bg-primary-dark">
+                    <img src="/images/taronja-box-clase-grupo-back-squat-barra-wod-valencia.webp" alt="Clase grupal WOD con back squat y barra en Taronja Box Valencia" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" decoding="async" width="1600" height="1200"/>
+                </div>
+                <div class="p-6 md:p-8 flex flex-col flex-grow">
+                    <span class="text-[10px] uppercase font-body tracking-widest text-primary/40 mb-3 font-bold">El núcleo del Box</span>
+                    <h4 class="text-3xl md:text-4xl font-display font-bold text-primary mb-4 transition-colors duration-300 group-hover:text-accent uppercase">Clases WOD</h4>
+                    <p class="hidden md:block font-body text-primary/60 text-sm leading-relaxed mb-8 flex-grow">
+                        El corazón de Taronja Box. Sesiones dirigidas de alta intensidad donde combinamos fuerza, gimnasia y resistencia. No importa tu punto de partida, cada entrenamiento es adaptable para que des tu máximo y evoluciones día a día junto a la comunidad.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Card 2: Halterofilia y Especialidades -->
+            <article class="flex-shrink-0 w-[60vw] md:w-[400px] lg:w-[450px] bg-white border border-accent/20 flex flex-col snap-center group cursor-pointer transition-shadow hover:shadow-md overflow-hidden">
+                <div class="w-full aspect-[4/3] overflow-hidden bg-primary-dark">
+                    <img src="/images/taronja-box-coach-ivan-entrenamiento-halterofilia-valencia.webp" alt="Coach Ivan dirigiendo entrenamiento de halterofilia en Taronja Box Valencia" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" decoding="async" width="1600" height="1200"/>
+                </div>
+                <div class="p-6 md:p-8 flex flex-col flex-grow">
+                    <span class="text-[10px] uppercase font-body tracking-widest text-primary/40 mb-3 font-bold">Trabajo específico</span>
+                    <h4 class="text-3xl md:text-4xl font-display font-bold text-primary mb-4 transition-colors duration-300 group-hover:text-accent uppercase">Halterofilia y Especialidades</h4>
+                    <p class="hidden md:block font-body text-primary/60 text-sm leading-relaxed mb-8 flex-grow">
+                        Ve un paso más allá en tu preparación. Dedica tiempo a pulir tu técnica en nuestras sesiones de Weightlifting y refuerza tus puntos débiles con nuestras clases de Supplements. El espacio perfecto para mejorar esos movimientos que se te resisten.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Card 3: Open Box -->
+            <article class="flex-shrink-0 w-[60vw] md:w-[400px] lg:w-[450px] bg-white border border-accent/20 flex flex-col snap-center group cursor-pointer transition-shadow hover:shadow-md overflow-hidden">
+                <div class="w-full aspect-[4/3] overflow-hidden bg-primary-dark">
+                    <img src="/images/taronja-box-mujeres-open-box-entrenamiento-libre-valencia.webp" alt="Mujeres en entrenamiento libre open box en Taronja Box Valencia" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" decoding="async" width="1600" height="1200"/>
+                </div>
+                <div class="p-6 md:p-8 flex flex-col flex-grow">
+                    <span class="text-[10px] uppercase font-body tracking-widest text-primary/40 mb-3 font-bold">Entrenamiento libre</span>
+                    <h4 class="text-3xl md:text-4xl font-display font-bold text-primary mb-4 transition-colors duration-300 group-hover:text-accent uppercase">Open Box</h4>
+                    <p class="hidden md:block font-body text-primary/60 text-sm leading-relaxed mb-8 flex-grow">
+                        Tu espacio, tus reglas. Aprovecha nuestras instalaciones totalmente equipadas fuera de las clases dirigidas. Ideal para perfeccionar tu técnica, seguir tu propia programación, o simplemente recuperar ese entrenamiento que te perdiste durante la semana.
+                    </p>
+                </div>
+            </article>
+            
+            <!-- Card 4: Masoterapia y Recuperación -->
+            <article class="flex-shrink-0 w-[60vw] md:w-[400px] lg:w-[450px] bg-white border border-accent/20 flex flex-col snap-center group cursor-pointer transition-shadow hover:shadow-md overflow-hidden">
+                <div class="w-full aspect-[4/3] overflow-hidden bg-primary-dark">
+                    <img src="/images/taronja-box-coach-supervision-atleta-back-squat-barra-valencia.webp" alt="Coach supervisando a atleta en back squat con barra en Taronja Box Valencia" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" decoding="async" width="1600" height="1200"/>
+                </div>
+                <div class="p-6 md:p-8 flex flex-col flex-grow">
+                    <span class="text-[10px] uppercase font-body tracking-widest text-primary/40 mb-3 font-bold">Cuidado y bienestar</span>
+                    <h4 class="text-3xl md:text-4xl font-display font-bold text-primary mb-4 transition-colors duration-300 group-hover:text-accent uppercase">Masoterapia y Recuperación</h4>
+                    <p class="hidden md:block font-body text-primary/60 text-sm leading-relaxed mb-8 flex-grow">
+                        Sabemos que el descanso es una parte innegociable del entrenamiento. Optimiza tu rendimiento, alivia tensiones y previene lesiones con nuestros planes de masaje deportivo. Diseñados para adaptarse a tu ritmo y mantener tu cuerpo siempre al 100%.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .font-display { font-family: 'Bebas Neue', sans-serif; }
+    .font-body { font-family: 'Open Sans', sans-serif; }
+    
+    .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const slider = document.getElementById('services-slider');
+        const prevBtn = document.getElementById('services-prev');
+        const nextBtn = document.getElementById('services-next');
+
+        if (slider && prevBtn && nextBtn) {
+            prevBtn.addEventListener('click', () => {
+                const card = slider.firstElementChild;
+                if (card) {
+                    const scrollAmount = card.clientWidth + 24; 
+                    slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                }
+            });
+            
+            nextBtn.addEventListener('click', () => {
+                const card = slider.firstElementChild;
+                if (card) {
+                    const scrollAmount = card.clientWidth + 24;
+                    slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                }
+            });
+        }
+    });
+</script>

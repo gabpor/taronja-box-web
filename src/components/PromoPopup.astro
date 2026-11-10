@@ -1,0 +1,107 @@
+---
+// src/components/PromoPopup.astro
+---
+<div id="promo-popup" class="fixed inset-0 z-[100] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+    <!-- Backdrop -->
+    <div id="popup-backdrop" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+    
+    <!-- Popup Content -->
+    <div class="relative w-full max-w-xl bg-white rounded-lg p-8 md:p-12 shadow-2xl transform scale-90 transition-transform duration-300" id="popup-content">
+        <!-- Close Button -->
+        <button id="close-popup" class="absolute top-6 right-6 text-accent hover:rotate-90 transition-transform duration-300 p-2 cursor-pointer">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+
+        <div class="flex flex-col items-center text-center gap-8">
+            <h2 class="font-display font-bold text-4xl md:text-5xl text-primary uppercase leading-none">
+                CANJEA TU PRUEBA GRATUITA
+            </h2>
+
+            <div class="flex flex-col items-center gap-6 w-full max-w-sm">
+                <p class="font-body text-primary/70 text-lg md:text-xl leading-relaxed">
+                    Para conseguir tu sesión de entrenamiento gratuita, solo tienes que completar nuestro formulario de registro. ¡Te esperamos!
+                </p>
+                
+                <a 
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSeca-KSyalf-i9ft_x-yq8wbunnGlH3Ib4TxC83ZpTSr4GU4g/viewform"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="w-full sm:w-auto bg-accent hover:bg-accent-hover text-white font-body font-bold text-lg px-12 py-4 rounded-full transition-all shadow-xl active:scale-95 text-center"
+                >
+                    Probar ahora
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const popup = document.getElementById('promo-popup');
+    const content = document.getElementById('popup-content');
+    const closeBtn = document.getElementById('close-popup');
+    const backdrop = document.getElementById('popup-backdrop');
+    const teamSection = document.getElementById('equipo');
+    const headerCtaBtn = document.getElementById('header-cta-btn');
+
+    let hasShown = false;
+
+    const openPopup = () => {
+        if (!popup || !content) return;
+        popup.classList.remove('opacity-0', 'pointer-events-none');
+        popup.classList.add('opacity-100', 'pointer-events-enable');
+        content.classList.remove('scale-90');
+        content.classList.add('scale-100');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closePopup = () => {
+        if (!popup || !content) return;
+        popup.classList.add('opacity-0', 'pointer-events-none');
+        popup.classList.remove('opacity-100', 'pointer-events-enable');
+        content.classList.add('scale-90');
+        content.classList.remove('scale-100');
+        document.body.style.overflow = 'auto';
+    };
+
+    if (closeBtn) closeBtn.addEventListener('click', closePopup);
+    if (backdrop) backdrop.addEventListener('click', closePopup);
+    
+    // Open popup from Header CTA
+    if (headerCtaBtn) {
+        headerCtaBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openPopup();
+        });
+    }
+
+    // Trigger popup on scroll, specifically after the carousel (for sedes) or at team section (for home)
+    const galleryTrigger = document.getElementById('gallery-promo-trigger');
+    
+    const handleScrollTrigger = () => {
+        if (hasShown) return;
+
+        // Condition 1: Sede pages (After Gallery)
+        if (galleryTrigger) {
+            const rect = galleryTrigger.getBoundingClientRect();
+            // Trigger when the carousel has mostly passed or the user has scrolled significantly into/past it
+            if (rect.bottom < window.innerHeight * 0.8) {
+                openPopup();
+                hasShown = true;
+                window.removeEventListener('scroll', handleScrollTrigger);
+            }
+        } 
+        // Condition 2: Home page (At Team section)
+        else if (teamSection) {
+            const rect = teamSection.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.7) {
+                openPopup();
+                hasShown = true;
+                window.removeEventListener('scroll', handleScrollTrigger);
+            }
+        }
+    };
+
+    window.addEventListener('scroll', handleScrollTrigger, { passive: true });
+</script>

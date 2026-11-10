@@ -1,0 +1,114 @@
+---
+// src/components/LocationBanner.astro
+// Banner de sugerencia de sede — resuelto 100% en el navegador.
+//
+// El hosting real (Hostinger) es estático puro: no hay servidor/edge que lea
+// la IP del visitante por request. Este componente se renderiza siempre oculto
+// y un script client-side consulta un servicio de geo-IP, calcula la sede más
+// cercana (misma lógica de src/lib/geoRouting.ts) y puebla/muestra el banner
+// si hay match. Si el fetch falla o no hay match, el banner simplemente nunca
+// se muestra — no hay fallback intrusivo ni redirección.
+// No usa localStorage/sessionStorage.
+---
+
+<aside
+  id="location-banner"
+  role="complementary"
+  aria-label="Sede Taronja Box sugerida"
+  class="w-full bg-primary-700 border-b border-accent hidden"
+>
+  <div class="max-w-5xl mx-auto px-4 py-3 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+    <!-- Icono + texto -->
+    <div class="flex items-center gap-3">
+      <span aria-hidden="true" class="flex-shrink-0 text-accent">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+          <path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-2.079 3.222-4.417 3.222-7.327a8.5 8.5 0 00-17 0c0 2.91 1.278 5.248 3.222 7.327a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+        </svg>
+      </span>
+      <p class="text-sm text-white">
+        <span id="location-banner-text" class="font-semibold text-accent"></span>
+        {' '}
+        <span id="location-banner-tagline" class="text-white opacity-80"></span>
+      </p>
+    </div>
+
+    <!-- Acciones -->
+    <div class="flex items-center gap-3 flex-shrink-0">
+      <a
+        id="location-banner-cta"
+        href="#"
+        class="inline-flex items-center gap-1.5 bg-accent hover:bg-accent-500 text-white text-sm font-semibold px-4 py-1.5 rounded-full transition-colors duration-200"
+      >
+        <span id="location-banner-cta-text">Ver sede</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4" aria-hidden="true">
+          <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" />
+        </svg>
+      </a>
+
+      <button
+        id="location-banner-close"
+        type="button"
+        aria-label="Cerrar sugerencia de sede"
+        class="text-white opacity-50 hover:opacity-100 transition-opacity duration-200 p-1 rounded"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4" aria-hidden="true">
+          <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</aside>
+
+<script>
+  import { resolveLocation } from '../lib/geoRouting';
+
+  const banner = document.getElementById('location-banner');
+  const closeBtn = document.getElementById('location-banner-close');
+  const textEl = document.getElementById('location-banner-text');
+  const taglineEl = document.getElementById('location-banner-tagline');
+  const ctaEl = document.getElementById('location-banner-cta') as HTMLAnchorElement | null;
+  const ctaTextEl = document.getElementById('location-banner-cta-text');
+
+  closeBtn?.addEventListener('click', () => {
+    banner?.classList.add('hidden');
+  });
+
+  async function suggestNearestLocation() {
+    if (!banner || !textEl || !taglineEl || !ctaEl || !ctaTextEl) return;
+
+    try {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 4000);
+
+      const res = await fetch('https://ipwho.is/', { signal: controller.signal });
+      clearTimeout(timeout);
+      if (!res.ok) return;
+
+      const data = await res.json();
+      if (!data.success) return;
+
+      const location = resolveLocation({
+        country: data.country_code,
+        city: data.city,
+        latitude: data.latitude,
+        longitude: data.longitude,
+      });
+
+      if (!location) return;
+
+      // No sugerir la sede si el visitante ya está en su landing
+      if (window.location.pathname.startsWith(location.href)) return;
+
+      textEl.textContent = `Detectamos que estás cerca de ${location.label}.`;
+      taglineEl.textContent = `${location.tagline}.`;
+      ctaEl.href = location.href;
+      ctaTextEl.textContent = `Ver sede ${location.label}`;
+      banner.classList.remove('hidden');
+    } catch {
+      // Fetch fallido, con timeout o bloqueado por el navegador: no mostramos
+      // el banner. Nunca debe romper la carga de la página.
+    }
+  }
+
+  suggestNearestLocation();
+</script>

@@ -1,0 +1,71 @@
+---
+// src/components/FaqSection.astro
+import { faqs } from '../lib/faqs';
+---
+
+<section id="faq" class="w-full bg-white py-16 md:py-24 px-4 md:px-8 lg:px-24 xl:px-32 flex flex-col items-center overflow-hidden">
+    <div class="w-full max-w-[1400px]">
+        
+        <!-- Headers -->
+        <div class="mb-20 md:mb-24">
+            <span class="font-body text-xl text-accent font-medium mb-3 block tracking-tight">PREGUNTAS FRECUENTES</span>
+            <h2 class="font-display font-bold text-5xl md:text-7xl text-primary uppercase leading-none">
+                ¿CÓMO PODEMOS AYUDARTE?
+            </h2>
+        </div>
+
+        <!-- FAQ List -->
+        <div class="flex flex-col border-t border-primary/10">
+            {faqs.map((faq, index) => (
+                <details class="group border-b border-primary/10 transition-all duration-300 group-open:bg-[#f8fafc] cursor-pointer mb-2">
+                    <summary class="flex items-center justify-between list-none outline-none px-6 py-6 md:py-10">
+                        <div class="flex items-center gap-8 md:gap-12">
+                            <span class="font-display font-bold text-4xl md:text-5xl text-accent leading-none shrink-0">
+                                {faq.id}
+                            </span>
+                            <h4 class="font-body font-bold text-sm md:text-lg text-gray-500 group-open:text-accent transition-colors duration-300 uppercase tracking-tight pr-4">
+                                {faq.question}
+                            </h4>
+                        </div>
+                        
+                        <!-- Arrow Icon in Circle -->
+                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-100 flex items-center justify-center text-gray-300 transition-all duration-300 group-open:text-accent group-open:border-accent group-open:rotate-180 bg-white flex-shrink-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    </summary>
+                    
+                    <div class="px-6 pb-10 md:pb-12 pr-16 animate-fade-down duration-300">
+                        <p class="font-body text-base md:text-lg text-accent/80 leading-relaxed max-w-4xl">
+                            {faq.answer}
+                        </p>
+                    </div>
+                </details>
+            ))}
+
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Details summary marker removal */
+    summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    @keyframes fade-down {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .animate-fade-down {
+        animation: fade-down 0.4s ease-out forwards;
+    }
+</style>

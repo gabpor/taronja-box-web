@@ -1,0 +1,98 @@
+---
+// src/pages/cookies.astro
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Política de Cookies" description="Política de Cookies de Taronja Box. Información sobre las cookies que utilizamos en nuestro sitio web.">
+  <section class="w-full bg-white pt-32 pb-24 px-6 md:px-16 lg:px-24">
+    <div class="max-w-4xl mx-auto">
+
+      <h1 class="font-display font-bold text-5xl md:text-7xl text-primary uppercase mb-4">Política de Cookies</h1>
+      <p class="font-body text-sm text-primary/40 mb-12">Última actualización: 25 de marzo de 2026</p>
+
+      <div class="prose-legal font-body text-primary/80 text-base leading-relaxed flex flex-col gap-8">
+
+        <div>
+          <h2 class="font-display text-2xl text-primary uppercase mb-3">1. ¿Qué son las cookies?</h2>
+          <p>Las cookies son pequeños archivos de texto que los sitios web almacenan en tu dispositivo cuando los visitas. Sirven para recordar tus preferencias, mejorar tu experiencia de navegación y recopilar información analítica.</p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-primary uppercase mb-3">2. ¿Qué cookies utilizamos?</h2>
+
+          <div class="overflow-x-auto mt-4">
+            <table class="w-full border-collapse text-sm">
+              <thead>
+                <tr class="border-b-2 border-primary/10">
+                  <th class="text-left py-3 pr-4 font-bold text-primary">Cookie</th>
+                  <th class="text-left py-3 pr-4 font-bold text-primary">Tipo</th>
+                  <th class="text-left py-3 pr-4 font-bold text-primary">Finalidad</th>
+                  <th class="text-left py-3 font-bold text-primary">Duración</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-primary/5">
+                  <td class="py-3 pr-4">_cf_bm</td>
+                  <td class="py-3 pr-4">Técnica</td>
+                  <td class="py-3 pr-4">Seguridad y gestión del tráfico (Cloudflare)</td>
+                  <td class="py-3">30 min</td>
+                </tr>
+                <tr class="border-b border-primary/5">
+                  <td class="py-3 pr-4">__cf_clearance</td>
+                  <td class="py-3 pr-4">Técnica</td>
+                  <td class="py-3 pr-4">Verificación de seguridad del navegador (Cloudflare)</td>
+                  <td class="py-3">15 min</td>
+                </tr>
+                <tr class="border-b border-primary/5">
+                  <td class="py-3 pr-4">_ga / _ga_*</td>
+                  <td class="py-3 pr-4">Analítica</td>
+                  <td class="py-3 pr-4">Estadísticas de uso del sitio web (Google Analytics)</td>
+                  <td class="py-3">2 años</td>
+                </tr>
+                <tr class="border-b border-primary/5">
+                  <td class="py-3 pr-4">cookie_consent</td>
+                  <td class="py-3 pr-4">Técnica</td>
+                  <td class="py-3 pr-4">Recordar tu elección sobre cookies</td>
+                  <td class="py-3">1 año</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-primary uppercase mb-3">3. Tipos de cookies</h2>
+          <ul class="list-disc pl-6 flex flex-col gap-2">
+            <li><strong>Técnicas (necesarias):</strong> imprescindibles para el funcionamiento del sitio web. No requieren consentimiento.</li>
+            <li><strong>Analíticas:</strong> nos permiten medir el tráfico y analizar el comportamiento de los usuarios para mejorar el servicio. Requieren tu consentimiento.</li>
+            <li><strong>De terceros:</strong> instaladas por servicios externos (Cloudflare, Google Analytics). Se rigen por las políticas de privacidad de dichos proveedores.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-primary uppercase mb-3">4. ¿Cómo gestionar las cookies?</h2>
+          <p>Puedes configurar o deshabilitar las cookies desde tu navegador. A continuación tienes las instrucciones para los navegadores más comunes:</p>
+          <ul class="list-disc pl-6 mt-2 flex flex-col gap-1">
+            <li><strong>Google Chrome:</strong> Configuración → Privacidad y seguridad → Cookies</li>
+            <li><strong>Mozilla Firefox:</strong> Ajustes → Privacidad y seguridad → Cookies y datos del sitio</li>
+            <li><strong>Safari:</strong> Preferencias → Privacidad → Cookies y datos de sitios web</li>
+            <li><strong>Microsoft Edge:</strong> Configuración → Cookies y permisos del sitio</li>
+          </ul>
+          <p class="mt-2">Ten en cuenta que deshabilitar cookies técnicas puede afectar al funcionamiento correcto del sitio web.</p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-primary uppercase mb-3">5. Consentimiento</h2>
+          <p>Al acceder por primera vez a nuestro sitio web, se muestra un aviso sobre el uso de cookies. Al continuar navegando o aceptar expresamente, consientes el uso de las cookies descritas en esta política.</p>
+          <p class="mt-2">Puedes revocar tu consentimiento en cualquier momento eliminando las cookies desde la configuración de tu navegador.</p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-primary uppercase mb-3">6. Actualización</h2>
+          <p>Esta política de cookies puede ser actualizada en función de cambios normativos o modificaciones en los servicios del sitio web. Te recomendamos revisarla periódicamente.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</Layout>

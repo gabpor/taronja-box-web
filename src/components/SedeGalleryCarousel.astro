@@ -1,0 +1,85 @@
+---
+// src/components/SedeGalleryCarousel.astro
+const images = [
+    { src: "/images/atleta-snatch-barra-olimpica-taronja-box.webp", alt: "Atleta ejecutando snatch con barra olímpica en Taronja Box, cross training Valencia" },
+    { src: "/images/taronja-box-atleta-pull-up-barra-dominadas-crosstraining-valencia.webp", alt: "Atleta en pull-up y dominadas en barra de crosstraining en Taronja Box Valencia" },
+    { src: "/images/comunidad-alumnos-exterior-taronja-box.webp", alt: "Comunidad de alumnos de Taronja Box posando juntos en zona exterior" },
+    { src: "/images/taronja-box-clase-dirigida-wod-barra-grupo-valencia.webp", alt: "Clase dirigida WOD con barra en grupo en Taronja Box Valencia" },
+    { src: "/images/atleta-pelo-rosa-mancuerna-competicion-taronja-box.webp", alt: "Atleta con mancuerna en competición de cross training en Taronja Box Valencia" },
+    { src: "/images/taronja-box-coach-atleta-knee-raise-barra-rig-crosstraining.webp", alt: "Coach y atleta en knee raise con barra en rig de crosstraining Taronja Box" },
+    { src: "/images/atleta-joven-mancuerna-competicion-taronja-box.webp", alt: "Atleta joven con mancuerna en competición de entrenamiento funcional Taronja Box" },
+    { src: "/images/taronja-box-atleta-felicidad-entrenamiento-crosstraining-comunidad-valencia.webp", alt: "Atleta sonriendo con alegría en entrenamiento de crosstraining en Taronja Box Valencia" },
+    { src: "/images/equipo-coaches-exterior-taronja-box.webp", alt: "Equipo de coaches de Taronja Box posando en zona exterior con logo" },
+    { src: "/images/taronja-box-valencia-pull-up-barra-crosstraining.webp", alt: "Pull-up en barra de crosstraining en Taronja Box Valencia" },
+    { src: "/images/atleta-snatch-discos-colores-taronja-box.webp", alt: "Atleta realizando snatch con discos de colores en Taronja Box Valencia" },
+    { src: "/images/taronja-box-coaches-equipo-box-jump-entrenamiento-funcional-valencia.webp", alt: "Equipo de coaches realizando box jump en entrenamiento funcional en Taronja Box Valencia" },
+    { src: "/images/atleta-femenina-clean-barra-taronja-box.webp", alt: "Atleta femenina realizando clean con barra en Taronja Box Valencia" },
+    { src: "/images/taronja-box-atleta-concentracion-entrenamiento-crosstraining-valencia.webp", alt: "Atleta concentrado en entrenamiento de crosstraining en Taronja Box Valencia" },
+];
+
+// Duplicamos las imágenes para el efecto de scroll infinito
+const displayImages = [...images, ...images];
+---
+
+<section id="gallery-promo-trigger" class="w-full py-12 bg-white overflow-hidden select-none">
+    <div class="carousel-container relative flex items-center">
+        <div class="carousel-track flex gap-4 md:gap-6 px-4">
+            {displayImages.map((img, index) => (
+                <div class="flex-shrink-0 w-[280px] md:w-[350px] aspect-[4/5] rounded-md overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-500 group">
+                    <img 
+                        src={img.src} 
+                        alt={img.alt} 
+                        class="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" 
+                        loading="lazy"
+                        decoding="async"
+                        width="900"
+                        height="1125"
+                    />
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
+
+<style>
+    .carousel-track {
+        width: fit-content;
+        animation: scroll-left 80s linear infinite;
+    }
+
+    @keyframes scroll-left {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    /* Pausar al pasar el ratón para facilitar la visualización */
+    .carousel-container:hover .carousel-track {
+        animation-play-state: paused;
+    }
+
+    /* Degradados laterales para suavizar la entrada y salida de las fotos */
+    .carousel-container::before,
+    .carousel-container::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        z-index: 10;
+        width: 150px;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    .carousel-container::before {
+        left: 0;
+        background: linear-gradient(to right, white, transparent);
+    }
+
+    .carousel-container::after {
+        right: 0;
+        background: linear-gradient(to left, white, transparent);
+    }
+</style>

@@ -1,0 +1,44 @@
+---
+// src/components/CtaSection.astro
+---
+<section class="w-full bg-white pt-0 pb-20 px-4 md:px-8 lg:px-24 xl:px-32 flex justify-center">
+    <div class="w-full max-w-[1400px]">
+        
+        <!-- CTA Banner -->
+        <!-- We use the primary blue for the banner box -->
+        <article class="relative w-full bg-[#131D2D] overflow-hidden rounded py-10 px-8 lg:px-20 min-h-[300px] md:min-h-[350px] flex items-center shadow-2xl">            
+
+            <!-- Left Content: High Contrast Text and Button -->
+            <div class="relative z-10 w-full md:w-[70%] flex flex-col items-start gap-10">
+                <div class="flex flex-col items-start space-y-4">
+                    <h3 class="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl text-white uppercase leading-none">
+                        GESTIÓN DE EVENTOS <br class="hidden md:block"/> PARA TERCEROS
+                    </h3>
+                    <p class="font-body text-white/70 text-sm md:text-base max-w-xl leading-relaxed">
+                        Llevamos nuestra experiencia más allá del Box. Somos especialistas en la organización integral de eventos deportivos, competiciones y activaciones externas. Cuéntanos tu proyecto y nosotros lo hacemos realidad.
+                    </p>
+                </div>
+                
+                <a href="https://wa.me/34635578396?text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20la%20organizaci%C3%B3n%20de%20eventos%20con%20Taronja%20Box." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-white text-[#FF8E5E] font-body font-bold text-xs md:text-sm tracking-widest uppercase px-8 py-3.5 rounded-md hover:bg-gray-50 transition-all shadow-lg active:scale-95 group">
+                    SOLICITAR INFO
+                    <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Right Background Graphic (Absolute Positioned Logo) -->
+            <!-- Massive logo clipped by the container, matching the reference's dynamic look -->
+            <div class="absolute right-[-15%] md:right-[-10%] top-[60%] md:top-[60%] -translate-y-1/4 h-[195%] md:h-[200%] w-auto opacity-100 pointer-events-none">
+                <img 
+                    src="/images/logo-taronja-naranja.webp" 
+                    alt="Taronja Box Logo Design" 
+                    class="h-full w-auto object-contain"
+                />
+            </div>
+
+        </article>
+
+    </div>
+</section>

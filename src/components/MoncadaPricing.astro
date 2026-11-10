@@ -1,0 +1,225 @@
+---
+// src/components/MoncadaPricing.astro
+---
+<section id="precios" class="w-full bg-white pb-24 pt-10 px-4 md:px-8 lg:px-24 xl:px-32 flex flex-col items-start overflow-hidden">
+    
+    <!-- TOP HEADER -->
+    <div class="w-full py-10 flex flex-col items-start text-left leading-none">
+        <h2 class="font-display font-bold text-5xl md:text-7xl uppercase text-primary mb-4">
+            TARIFAS
+        </h2>
+        <p class="font-body text-primary/60 max-w-2xl text-sm md:text-base font-medium leading-relaxed">
+            Planes flexibles adaptados a tu ritmo de vida. Elige la opción que mejor se ajuste a tus objetivos.
+        </p>
+    </div>
+
+    <!-- MAIN PLANS GRID -->
+    <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch mb-16">
+        
+        <!-- PLAN 9 WOD -->
+        <div class="bg-white border border-primary/5 p-8 flex flex-col items-center text-center rounded-md shadow-sm hover:shadow-xl transition-all group">
+            <h4 class="font-display font-bold text-3xl uppercase text-primary mb-1 leading-none group-hover:text-accent transition-colors">9 WOD + 4 OPEN</h4>
+            <p class="font-body text-[10px] text-gray-400 mb-6 uppercase tracking-widest font-bold">Ideal para mantenimiento</p>
+            <div class="flex flex-col items-center mb-6">
+                <div class="flex items-baseline gap-1 text-primary font-display font-bold">
+                    <span class="text-6xl">€ 55</span>
+                    <span class="font-body font-bold text-sm">/ mes</span>
+                </div>
+                <div class="mt-2 text-[10px] font-body font-bold text-primary/40 uppercase tracking-tighter">
+                    3 meses: 140,25€ | 1 año: 495€
+                </div>
+            </div>
+            <ul class="flex flex-col gap-3 mb-8 w-full text-left">
+                <li class="flex items-start gap-2 font-body text-xs text-primary/70">
+                    <span class="text-accent">✓</span> Halterofilia y CrossKids Ilimitado
+                </li>
+                <li class="flex items-start gap-2 font-body text-xs text-primary/70">
+                    <span class="text-accent">✓</span> WOD, Endurance, Gymnastics...
+                </li>
+            </ul>
+            <a href="https://taronjamoncada.wodbuster.com/user/pagos.aspx" target="_blank" rel="noopener noreferrer" class="mt-auto w-full py-3 bg-primary text-white font-body font-bold uppercase text-xs rounded-md hover:bg-accent transition-all text-center">Apuntarse</a>
+        </div>
+
+        <!-- PLAN 13 WOD (FEATURED) -->
+        <div class="bg-white border-2 border-accent p-8 flex flex-col items-center text-center rounded-md shadow-xl hover:shadow-2xl transition-all group relative py-10">
+            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-primary text-white text-[9px] font-bold px-5 py-1.5 uppercase tracking-widest rounded-full shadow-md whitespace-nowrap border border-white/10">
+                El más popular
+            </div>
+            <h4 class="font-display font-bold text-4xl uppercase text-primary mb-1 leading-none">13 WOD + 4 OPEN</h4>
+            <p class="font-body text-xs text-gray-400 mb-6 font-medium">Progreso constante: 3 días/semana</p>
+            
+            <div class="flex flex-col items-center mb-6">
+                <div class="flex items-baseline gap-1 text-primary font-display font-bold">
+                    <span class="text-6xl text-primary">€ 65</span>
+                    <span class="font-body font-bold text-sm">/ mes</span>
+                </div>
+                <div class="mt-2 text-[10px] font-body font-bold text-primary/40 uppercase tracking-tighter">
+                    3 meses: 165,75€ | 1 año: 585€
+                </div>
+            </div>
+
+            <div class="flex items-center gap-2 mb-8 font-body font-bold text-primary text-sm whitespace-nowrap">
+                <span class="text-accent text-lg">✓</span> 13 sesiones + 4 Open
+            </div>
+
+            <a href="https://taronjamoncada.wodbuster.com/user/pagos.aspx" target="_blank" rel="noopener noreferrer" class="mt-auto w-full py-4 bg-accent text-white font-body font-bold uppercase text-xs rounded-md hover:brightness-110 transition-all shadow-lg shadow-accent/30 text-center">
+                Elegir plan
+            </a>
+        </div>
+
+        <!-- PLAN 17 WOD -->
+        <div class="bg-white border border-primary/5 p-8 flex flex-col items-center text-center rounded-md shadow-sm hover:shadow-xl transition-all group">
+            <h4 class="font-display font-bold text-3xl uppercase text-primary mb-1 leading-none group-hover:text-accent transition-colors">17 WOD + 4 OPEN</h4>
+            <p class="font-body text-[10px] text-gray-400 mb-6 uppercase tracking-widest font-bold">Alto rendimiento</p>
+            <div class="flex flex-col items-center mb-6">
+                <div class="flex items-baseline gap-1 text-primary font-display font-bold">
+                    <span class="text-6xl">€ 75</span>
+                    <span class="font-body font-bold text-sm">/ mes</span>
+                </div>
+                <div class="mt-2 text-[10px] font-body font-bold text-primary/40 uppercase tracking-tighter">
+                    3 meses: 191,25€ | 1 año: 675€
+                </div>
+            </div>
+            <ul class="flex flex-col gap-3 mb-8 w-full text-left">
+                <li class="flex items-start gap-2 font-body text-xs text-primary/70">
+                    <span class="text-accent">✓</span> Especialidades Ilimitadas
+                </li>
+                <li class="flex items-start gap-2 font-body text-xs text-primary/70">
+                    <span class="text-accent">✓</span> Frecuencia Casi Diaria
+                </li>
+            </ul>
+            <a href="https://taronjamoncada.wodbuster.com/user/pagos.aspx" target="_blank" rel="noopener noreferrer" class="mt-auto w-full py-3 bg-primary text-white font-body font-bold uppercase text-xs rounded-md hover:bg-accent transition-all text-center">Apuntarse</a>
+        </div>
+
+        <!-- PLAN ILIMITADA (UNIFIED) -->
+        <div class="bg-white border border-primary/5 p-8 flex flex-col items-center text-center rounded-md shadow-sm hover:shadow-xl transition-all group">
+            <h4 class="font-display font-bold text-3xl uppercase text-primary mb-1 leading-none group-hover:text-accent transition-colors">ILIMITADA TOTAL</h4>
+            <p class="font-body text-[10px] text-gray-400 mb-6 uppercase tracking-widest font-bold">Sin restricciones: Acceso total</p>
+            
+            <div class="flex flex-col items-center mb-6">
+                <div class="flex items-baseline gap-1 text-primary font-display font-bold">
+                    <span class="text-6xl">€ 80</span>
+                    <span class="font-body font-bold text-sm">/ mes</span>
+                </div>
+                <div class="mt-2 text-[10px] font-body font-bold text-primary/40 uppercase tracking-tighter">
+                    3 meses: 204€ | 1 año: 720€
+                </div>
+            </div>
+
+            <ul class="flex flex-col gap-3 mb-8 w-full text-left">
+                <li class="flex items-start gap-2 font-body text-xs text-primary/70">
+                    <span class="text-accent">✓</span> Acceso Total a todas las sesiones
+                </li>
+                <li class="flex items-start gap-2 font-body text-xs text-primary/70">
+                    <span class="text-accent">✓</span> Máxima flexibilidad horaria
+                </li>
+            </ul>
+
+            <a href="https://taronjamoncada.wodbuster.com/user/pagos.aspx" target="_blank" rel="noopener noreferrer" class="mt-auto w-full py-3 bg-primary text-white font-body font-bold uppercase text-xs rounded-md hover:bg-accent transition-all text-center">
+                Apuntarse
+            </a>
+        </div>
+    </div>
+
+    <!-- SECONDARY PLANS -->
+    <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        
+        <!-- ILIMITADA MAÑANAS -->
+        <div class="bg-gray-50 border border-primary/5 p-6 rounded-md flex flex-col">
+            <h4 class="font-display font-bold text-2xl uppercase text-primary mb-1">ILIMITADA MAÑANAS</h4>
+            <div class="flex items-baseline gap-1 text-primary font-display font-bold mb-4">
+                <span class="text-4xl">€ 68</span>
+                <span class="font-body font-bold text-xs">/ mes</span>
+            </div>
+            <p class="font-body text-xs text-primary/60 mb-6">Acceso ilimitado a todas las sesiones matinales de WOD, Open Box y Especialidades.</p>
+            <a href="https://taronjamoncada.wodbuster.com/user/pagos.aspx" target="_blank" rel="noopener noreferrer" class="mt-auto py-2 border border-primary/20 text-primary font-body font-bold uppercase text-[10px] rounded-lg hover:bg-primary hover:text-white transition-all text-center">Saber más</a>
+        </div>
+
+        <!-- ILIMITADA OPEN BOX -->
+        <div class="bg-gray-50 border border-primary/5 p-6 rounded-md flex flex-col">
+            <h4 class="font-display font-bold text-2xl uppercase text-primary mb-1">ILIMITADA OPEN BOX</h4>
+            <div class="flex items-baseline gap-1 text-primary font-display font-bold mb-4">
+                <span class="text-4xl">€ 60</span>
+                <span class="font-body font-bold text-xs">/ mes</span>
+            </div>
+            <p class="font-body text-xs text-primary/60 mb-6 font-medium">Uso libre de las instalaciones: Open Box, Hero WOD, Teens y Especialidades Ilimitado.</p>
+            <a href="https://taronjamoncada.wodbuster.com/user/pagos.aspx" target="_blank" rel="noopener noreferrer" class="mt-auto py-2 border border-primary/20 text-primary font-body font-bold uppercase text-[10px] rounded-lg hover:bg-primary hover:text-white transition-all text-center">Saber más</a>
+        </div>
+
+        <!-- TEENS -->
+        <div class="bg-[#FFF7F2] border border-accent/10 p-6 rounded-md flex flex-col">
+            <h4 class="font-display font-bold text-2xl uppercase text-accent mb-1">TEENS 8 SS/MES</h4>
+            <div class="flex items-baseline gap-1 text-accent font-display font-bold mb-4">
+                <span class="text-4xl">€ 40</span>
+                <span class="font-body font-bold text-xs">/ mes</span>
+            </div>
+            <p class="font-body text-xs text-primary/60 mb-6">Plan enfocado a adolescentes: 8 sesiones al mes con acompañamiento especializado.</p>
+            <a href="https://taronjamoncada.wodbuster.com/user/pagos.aspx" target="_blank" rel="noopener noreferrer" class="mt-auto py-2 bg-accent/10 text-accent font-body font-bold uppercase text-[10px] rounded-lg hover:bg-accent hover:text-white transition-all text-center">Saber más</a>
+        </div>
+    </div>
+
+    <!-- BONOS Y SESIONES SECTION -->
+    <div class="w-full mb-10 flex flex-col items-start">
+        <h3 class="font-display font-bold text-3xl md:text-4xl uppercase text-accent mb-6 text-left relative">
+            Bonos y Sesiones
+            <span class="absolute -bottom-1.5 left-0 w-10 h-1 bg-accent rounded-full"></span>
+        </h3>
+    </div>
+
+    <div class="w-full bg-[#f8fafc] border border-primary/5 py-12 px-8 md:px-16 rounded-md overflow-hidden relative group flex flex-col lg:flex-row items-center justify-between gap-12">
+        <div class="flex flex-col gap-8 w-full lg:w-3/5 relative z-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- Drop In -->
+                <div class="flex justify-between items-center bg-white p-5 rounded-md border border-primary/5 shadow-sm hover:shadow-md transition-all border-l-4 border-l-accent">
+                    <div class="flex flex-col">
+                        <span class="font-body font-bold text-xs uppercase tracking-wider text-primary/40 leading-none mb-1">Sesión Suelta</span>
+                        <span class="font-body font-extrabold text-sm uppercase text-primary">Drop In</span>
+                    </div>
+                    <span class="font-display text-3xl text-primary">10€</span>
+                </div>
+
+                <!-- Bono 5 -->
+                <div class="flex justify-between items-center bg-white p-5 rounded-md border border-primary/5 shadow-sm hover:shadow-md transition-all border-l-4 border-l-primary/20">
+                    <div class="flex flex-col">
+                        <span class="font-body font-bold text-xs uppercase tracking-wider text-primary/40 leading-none mb-1">Pack Ahorro</span>
+                        <span class="font-body font-extrabold text-sm uppercase text-primary">Bono 5</span>
+                    </div>
+                    <span class="font-display text-3xl text-primary">40€</span>
+                </div>
+
+                <!-- Bono 10 -->
+                <div class="flex justify-between items-center bg-white p-5 rounded-md border border-primary/5 shadow-sm hover:shadow-md transition-all border-l-4 border-l-primary/20">
+                    <div class="flex flex-col">
+                        <span class="font-body font-bold text-xs uppercase tracking-wider text-primary/40 leading-none mb-1">Más Popular</span>
+                        <span class="font-body font-extrabold text-sm uppercase text-primary">Bono 10</span>
+                    </div>
+                    <span class="font-display text-3xl text-primary">70€</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="flex flex-col items-center lg:items-end gap-6 w-full lg:w-2/5 relative z-10 text-center lg:text-right">
+            <div class="flex flex-col gap-4">
+                <p class="font-body text-primary/60 text-base font-medium leading-relaxed max-w-sm lg:ml-auto">
+                    ¿Vienes de paso o quieres probar una sesión suelta? Tenemos la opción perfecta para que no pierdas tu ritmo de entrenamiento.
+                </p>
+                <div class="flex items-center justify-center lg:justify-end gap-3 text-accent font-body font-bold text-xs uppercase tracking-widest">
+                    <span class="w-8 h-px bg-accent/30"></span>
+                    Sin matrícula · Sin permanencia
+                </div>
+            </div>
+            <a href="https://taronjamoncada.wodbuster.com/user/pagos.aspx" target="_blank" rel="noopener noreferrer" class="bg-accent text-white px-4 md:px-6 py-2.5 md:py-3 rounded-md font-body font-bold uppercase text-[10px] md:text-xs tracking-[0.15em] hover:bg-primary transition-all flex items-center gap-2 group/btn">
+                Comprar bono ahora
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+    .font-display { font-family: 'Bebas Neue', sans-serif; }
+    .font-body { font-family: 'Open Sans', sans-serif; }
+</style>

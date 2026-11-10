@@ -1,0 +1,182 @@
+---
+// src/components/ProjectsSection.astro
+---
+<section id="eventos" class="w-full bg-gray-50 text-primary px-4 md:px-8 lg:px-24 xl:px-32 py-16 md:py-20 lg:min-h-screen lg:flex lg:flex-col">
+    <div class="w-full max-w-[1400px] mx-auto lg:flex lg:flex-col gap-6 lg:gap-8 flex flex-col">
+
+        <!-- Header: Full Width -->
+        <div>
+            <p class="font-body text-accent text-sm md:text-base uppercase tracking-wider mb-3">Nuestros Eventos</p>
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-2">
+                <h3 class="font-display font-bold text-4xl md:text-5xl lg:text-6xl uppercase text-primary">
+                    EVENTOS REALIZADOS
+                </h3>
+                <p class="font-body text-primary/60 text-sm md:text-base leading-relaxed md:max-w-xs lg:max-w-sm text-right hidden md:block">
+                    Organizamos eventos deportivos de alto nivel. Confianza y experiencia avaladas por marcas referentes en la Comunitat Valenciana.
+                </p>
+            </div>
+            <p class="font-body text-primary/60 text-sm leading-relaxed mt-2 md:hidden">
+                Organizamos eventos deportivos de alto nivel. Confianza y experiencia avaladas por marcas referentes en la Comunitat Valenciana.
+            </p>
+        </div>
+
+        <!-- Two Column Layout: Cards + CTA -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10">
+
+            <!-- Left Column: Events List -->
+            <div class="lg:h-[calc(100vh-200px)] lg:min-h-[500px] lg:overflow-y-auto pr-1 scrollbar-custom flex flex-col gap-3">
+
+                <!-- Event Card 1 — VERA SUMMER -->
+                <div class="bg-white rounded-lg p-4 border border-gray-200 hover:border-accent transition-colors flex items-center gap-4">
+                    <div class="w-20 h-20 rounded-lg bg-gray-100 flex items-center justify-center shrink-0 overflow-hidden">
+                        <img src="/images/logo-vera.webp" alt="Vera Summer logo" class="w-full h-full object-contain scale-[1.3]" loading="lazy" decoding="async" />
+                    </div>
+                    <div>
+                        <h4 class="font-display text-2xl font-bold text-primary uppercase mb-1">VERA SUMMER</h4>
+                        <p class="font-body text-primary/60 text-base leading-relaxed">Festival de Cross Training estival al aire libre. Diseño de arena y logística integral para cientos de participantes.</p>
+                    </div>
+                </div>
+
+                <!-- Event Card 2 — EFC -->
+                <div class="bg-white rounded-lg p-4 border border-gray-200 hover:border-accent transition-colors flex items-center gap-4">
+                    <div class="w-20 h-20 rounded-lg bg-gray-100 flex items-center justify-center shrink-0 overflow-hidden">
+                        <img src="/images/logo-vera-summer.webp" alt="EFC logo" class="w-full h-full object-contain" loading="lazy" decoding="async" />
+                    </div>
+                    <div>
+                        <h4 class="font-display text-2xl font-bold text-primary uppercase mb-1">EFC</h4>
+                        <p class="font-body text-primary/60 text-base leading-relaxed">Producción y management del Elite Functional Challenger. Timing, infraestructura y flujos de competición al más alto nivel.</p>
+                    </div>
+                </div>
+
+                <!-- Event Card 3 — VIDGAMES -->
+                <div class="bg-white rounded-lg p-4 border border-gray-200 hover:border-accent transition-colors flex items-center gap-4">
+                    <div class="w-20 h-20 rounded-lg bg-gray-100 flex items-center justify-center shrink-0 overflow-hidden">
+                        <img src="/images/logo-vid-games.webp" alt="Vid Games logo" class="w-full h-full object-contain" loading="lazy" decoding="async" />
+                    </div>
+                    <div>
+                        <h4 class="font-display text-2xl font-bold text-primary uppercase mb-1">VIDGAMES</h4>
+                        <p class="font-body text-primary/60 text-base leading-relaxed">Despliegue logístico y gestión técnica de este campeonato funcional urbano. Infraestructura, compliance y experiencia fitness inmersiva.</p>
+                    </div>
+                </div>
+
+                <!-- Event Card 4 — TEAM GAMES -->
+                <div class="bg-white rounded-lg p-4 border border-gray-200 hover:border-accent transition-colors flex items-center gap-4">
+                    <div class="w-20 h-20 rounded-lg bg-gray-100 flex items-center justify-center shrink-0 overflow-hidden">
+                        <img src="/images/logo-team-games.webp" alt="Team Games logo" class="w-full h-full object-contain scale-[1.3]" loading="lazy" decoding="async" />
+                    </div>
+                    <div>
+                        <h4 class="font-display text-2xl font-bold text-primary uppercase mb-1">TEAM GAMES</h4>
+                        <p class="font-body text-primary/60 text-base leading-relaxed">Competición por equipos de alto dinamismo. Coordinación impecable de múltiples atletas con el máximo estándar de judging y espectáculo.</p>
+                    </div>
+                </div>
+
+                <!-- Event Card 5 — UNITY CHAMPIONS -->
+                <div class="bg-white rounded-lg p-4 border border-gray-200 hover:border-accent transition-colors flex items-center gap-4">
+                    <div class="w-20 h-20 rounded-lg bg-gray-100 flex items-center justify-center shrink-0 overflow-hidden">
+                        <img src="/images/logo-unity.webp" alt="Unity Championship logo" class="w-full h-full object-contain" loading="lazy" decoding="async" />
+                    </div>
+                    <div>
+                        <h4 class="font-display text-2xl font-bold text-primary uppercase mb-1">UNITY CHAMPIONS</h4>
+                        <p class="font-body text-primary/60 text-base leading-relaxed">Producción del Unity Championship fuera de nuestra sede. Logística multitudinaria y experiencia del atleta al máximo estándar competitivo.</p>
+                    </div>
+                </div>
+
+                <!-- Event Card 6 — LA LIGA BURGER -->
+                <div class="bg-white rounded-lg p-4 border border-gray-200 hover:border-accent transition-colors flex items-center gap-4">
+                    <div class="w-20 h-20 rounded-lg bg-gray-100 flex items-center justify-center shrink-0 overflow-hidden">
+                        <img src="/images/logo-la-liga-burger.webp" alt="La Liga Burger logo" class="w-full h-full object-contain" loading="lazy" decoding="async" />
+                    </div>
+                    <div>
+                        <h4 class="font-display text-2xl font-bold text-primary uppercase mb-1">LA LIGA BURGER</h4>
+                        <p class="font-body text-primary/60 text-base leading-relaxed">Formato festival al máximo nivel. Foodtrucks, actuaciones en directo y miles de asistentes gestionados con precisión logística.</p>
+                    </div>
+                </div>
+
+                <!-- Event Card 7 — BAMBOLEA SPORCITY -->
+                <div class="bg-white rounded-lg p-4 border border-gray-200 hover:border-accent transition-colors flex items-center gap-4">
+                    <div class="w-20 h-20 rounded-lg bg-gray-100 flex items-center justify-center shrink-0 overflow-hidden">
+                        <img src="/images/logo-sporcity.webp" alt="Bambolea Sporcity logo" class="w-full h-full object-contain p-1" loading="lazy" decoding="async" />
+                    </div>
+                    <div>
+                        <h4 class="font-display text-2xl font-bold text-primary uppercase mb-1">BAMBOLEA SPORCITY</h4>
+                        <p class="font-body text-primary/60 text-base leading-relaxed">Co-organización con Sport City Valencia. Motor logístico y técnico para eventos deportivos de alto nivel en un gran club.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Column: CTA Card -->
+            <div class="lg:self-start lg:sticky lg:top-10">
+                <div class="bg-white rounded-2xl p-8 md:p-10 border-2 border-accent shadow-lg">
+
+                    <!-- Badge -->
+                    <div class="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full mb-6">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <span class="font-body text-sm font-semibold uppercase tracking-wide">Organización Premium</span>
+                    </div>
+
+                    <!-- Title -->
+                    <h3 class="font-display font-bold text-3xl md:text-4xl uppercase text-primary mb-4">
+                        EXPERTOS EN PRODUCCIÓN DE EVENTOS DEPORTIVOS
+                    </h3>
+
+                    <!-- Description -->
+                    <p class="font-body text-primary/60 text-base leading-relaxed mb-8">
+                        Lideramos la organización integral de eventos fitness, competiciones funcionales y festivales deportivos en toda España. Si buscas un partner que garantice solvencia técnica y espectacularidad, estás en el lugar correcto.
+                    </p>
+
+                    <!-- CTA Button -->
+                    <a href="https://wa.me/34635578396?text=%C2%A1Hola%21%20He%20visto%20vuestra%20web%20y%20necesito%20ayuda%20con%20la%20producci%C3%B3n%2Forganizaci%C3%B3n%20de%20un%20evento.%20%C2%BFPodemos%20hablar%20un%20momento%20y%20me%20cont%C3%A1is%20c%C3%B3mo%20trabaj%C3%A1is%3F" target="_blank" rel="noopener noreferrer" class="block w-full bg-accent hover:bg-[#c25e36] text-white font-display font-normal text-lg uppercase tracking-widest py-4 px-6 rounded-lg transition-colors text-center shadow-md hover:shadow-lg">
+                        CONTACTAR POR WHATSAPP
+                    </a>
+
+                    <!-- Social Proof -->
+                    <div class="mt-6 pt-6 border-t border-gray-200">
+                        <div class="flex items-center gap-3">
+                            <div class="flex -space-x-2">
+                                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-accent to-primary border-2 border-white"></div>
+                                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-accent border-2 border-white"></div>
+                                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-accent/80 to-primary/80 border-2 border-white"></div>
+                            </div>
+                            <p class="font-body text-primary/60 text-xs">
+                                <strong class="text-primary font-semibold">10+ eventos</strong> organizados con éxito
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .scrollbar-custom {
+        scrollbar-width: thin;
+        scrollbar-color: #D96A3E transparent;
+    }
+    .scrollbar-custom::-webkit-scrollbar {
+        width: 5px;
+    }
+    .scrollbar-custom::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    .scrollbar-custom::-webkit-scrollbar-thumb {
+        background: #D96A3E;
+        border-radius: 3px;
+    }
+    .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+        background: #c25e36;
+    }
+    .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+</style>

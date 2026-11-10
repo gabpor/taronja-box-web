@@ -1,0 +1,380 @@
+---
+// src/components/TeamSection.astro
+---
+<section id="equipo" class="w-full bg-accent text-white py-16 md:py-24 px-4 md:px-8 lg:px-24 xl:px-32 flex flex-col items-start overflow-hidden">
+
+    <!-- Header Area -->
+    <div class="w-full flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        <h3 class="font-display font-bold text-5xl md:text-7xl uppercase mb-2 md:mb-0 text-white">
+            EL EQUIPO
+        </h3>
+
+        <!-- Navigation Buttons -->
+        <div class="hidden md:flex gap-4 pb-2">
+            <button id="team-prev" class="w-14 h-14 rounded-full border border-white/50 flex items-center justify-center text-white/70 hover:text-white hover:border-white hover:bg-white/10 transition-colors cursor-pointer" aria-label="Previous slide">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 12H5M5 12L12 19M5 12L12 5" />
+                </svg>
+            </button>
+            <button id="team-next" class="w-14 h-14 rounded-full bg-white flex items-center justify-center text-accent hover:bg-gray-100 transition-colors shadow-sm hover:shadow-md cursor-pointer" aria-label="Next slide">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 12H19M19 12L12 5M19 12L12 19" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Slider Area -->
+    <div class="w-full relative">
+        <div id="team-slider" class="flex gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory pb-8 pt-2 scroll-smooth hide-scrollbar">
+
+            <!-- Team Member: Iván -->
+            <article class="relative flex-shrink-0 w-[65vw] sm:w-[220px] md:w-[250px] aspect-[1/2] overflow-hidden snap-start group cursor-pointer rounded-lg">
+                <img src="/images/ivan.webp" alt="Iván" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" decoding="async" width="800" height="1400"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <!-- Color dot -->
+                <div class="absolute top-4 right-4 w-5 h-5 rounded-full border-2 border-white/60 shadow-sm" style="background-color: #D96A3E;"></div>
+                <!-- Default bottom info -->
+                <div class="absolute bottom-0 left-0 w-full p-5 flex flex-col items-start transition-opacity duration-300 group-hover:opacity-0">
+                    <span class="bg-white text-accent text-[10px] md:text-xs font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm mb-1">DIRECTOR DE FITNESS</span>
+                    <h4 class="font-display font-bold text-3xl text-white">IVÁN</h4>
+                    <p class="font-body text-sm text-white leading-snug mt-2">Un día vivido, un sueño cumplido</p>
+                </div>
+                <!-- Hover panel -->
+                <div class="absolute bottom-0 left-0 w-full bg-primary/95 translate-y-full group-hover:translate-y-0 transition-transform duration-400 ease-out p-5 flex flex-col gap-3">
+                    <div>
+                        <span class="bg-white text-accent text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm">OSTEÓPATA</span>
+                        <h4 class="font-display font-bold text-2xl text-white mt-1">IVÁN</h4>
+                    </div>
+                    <ul class="flex flex-col gap-1">
+                        <li class="text-white/80 text-xs font-body">🎂 <span class="text-white/50">Edad</span> — 43 años</li>
+                        <li class="text-white/80 text-xs font-body">🎨 <span class="text-white/50">Color</span> — Naranja</li>
+                        <li class="text-white/80 text-xs font-body">🍽️ <span class="text-white/50">Comida</span> — Tortilla de patata con cebolla</li>
+                        <li class="text-white/80 text-xs font-body">⭐ <span class="text-white/50">Fav</span> — Burpee</li>
+                        <li class="text-white/80 text-xs font-body">💀 <span class="text-white/50">Odiando</span> — Wall ball</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Team Member: Edgar -->
+            <article class="relative flex-shrink-0 w-[65vw] sm:w-[220px] md:w-[250px] aspect-[1/2] overflow-hidden snap-start group cursor-pointer rounded-lg">
+                <img src="/images/edgar.webp" alt="Edgar" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" decoding="async" width="800" height="1400"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute top-4 right-4 w-5 h-5 rounded-full border-2 border-white/60 shadow-sm" style="background-color: #D96A3E;"></div>
+                <div class="absolute bottom-0 left-0 w-full p-5 flex flex-col items-start transition-opacity duration-300 group-hover:opacity-0">
+                    <span class="bg-white text-accent text-[10px] md:text-xs font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm mb-1">COACH</span>
+                    <h4 class="font-display font-bold text-3xl text-white">EDGAR</h4>
+                    <p class="font-body text-sm text-white leading-snug mt-2">Si vis pacem, para bellum</p>
+                </div>
+                <div class="absolute bottom-0 left-0 w-full bg-primary/95 translate-y-full group-hover:translate-y-0 transition-transform duration-400 ease-out p-5 flex flex-col gap-3">
+                    <div>
+                        <span class="bg-white text-accent text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm">COACH</span>
+                        <h4 class="font-display font-bold text-2xl text-white mt-1">EDGAR</h4>
+                    </div>
+                    <ul class="flex flex-col gap-1">
+                        <li class="text-white/80 text-xs font-body">🎂 <span class="text-white/50">Edad</span> — 37 años</li>
+                        <li class="text-white/80 text-xs font-body">🎨 <span class="text-white/50">Color</span> — Naranja</li>
+                        <li class="text-white/80 text-xs font-body">🍽️ <span class="text-white/50">Comida</span> — Fideuá de la mami</li>
+                        <li class="text-white/80 text-xs font-body">⭐ <span class="text-white/50">Fav</span> — Snatch</li>
+                        <li class="text-white/80 text-xs font-body">💀 <span class="text-white/50">Odiando</span> — Thrusters</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Team Member: Sarah -->
+            <article class="relative flex-shrink-0 w-[65vw] sm:w-[220px] md:w-[250px] aspect-[1/2] overflow-hidden snap-start group cursor-pointer rounded-lg">
+                <img src="/images/sarah.webp" alt="Sarah" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" decoding="async" width="800" height="1400"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute top-4 right-4 w-5 h-5 rounded-full border-2 border-white/60 shadow-sm" style="background-color: #1a1a1a;"></div>
+                <div class="absolute bottom-0 left-0 w-full p-5 flex flex-col items-start transition-opacity duration-300 group-hover:opacity-0">
+                    <span class="bg-white text-accent text-[10px] md:text-xs font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm mb-1">COACH</span>
+                    <h4 class="font-display font-bold text-3xl text-white">SARAH</h4>
+                    <p class="font-body text-sm text-white leading-snug mt-2">La vida no trae instrucciones, pero por suerte trae café y wods.</p>
+                </div>
+                <div class="absolute bottom-0 left-0 w-full bg-primary/95 translate-y-full group-hover:translate-y-0 transition-transform duration-400 ease-out p-5 flex flex-col gap-3">
+                    <div>
+                        <span class="bg-white text-accent text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm">COACH</span>
+                        <h4 class="font-display font-bold text-2xl text-white mt-1">SARAH</h4>
+                    </div>
+                    <ul class="flex flex-col gap-1">
+                        <li class="text-white/80 text-xs font-body">🎂 <span class="text-white/50">Edad</span> — 30 años</li>
+                        <li class="text-white/80 text-xs font-body">🎨 <span class="text-white/50">Color</span> — Negro</li>
+                        <li class="text-white/80 text-xs font-body">🍽️ <span class="text-white/50">Comida</span> — Sushi</li>
+                        <li class="text-white/80 text-xs font-body">⭐ <span class="text-white/50">Fav</span> — BMU</li>
+                        <li class="text-white/80 text-xs font-body">💀 <span class="text-white/50">Odiando</span> — Thrusters</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Team Member: Lucho -->
+            <article class="relative flex-shrink-0 w-[65vw] sm:w-[220px] md:w-[250px] aspect-[1/2] overflow-hidden snap-start group cursor-pointer rounded-lg">
+                <img src="/images/lucho.webp" alt="Lucho" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" decoding="async" width="800" height="1400"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute top-4 right-4 w-5 h-5 rounded-full border-2 border-white/60 shadow-sm" style="background-color: #2980B9;"></div>
+                <div class="absolute bottom-0 left-0 w-full p-5 flex flex-col items-start transition-opacity duration-300 group-hover:opacity-0">
+                    <span class="bg-white text-accent text-[10px] md:text-xs font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm mb-1">COACH</span>
+                    <h4 class="font-display font-bold text-3xl text-white">LUCHO</h4>
+                    <p class="font-body text-sm text-white leading-snug mt-2">No hacen falta alas para volar, solo viento para poder despegar</p>
+                </div>
+                <div class="absolute bottom-0 left-0 w-full bg-primary/95 translate-y-full group-hover:translate-y-0 transition-transform duration-400 ease-out p-5 flex flex-col gap-3">
+                    <div>
+                        <span class="bg-white text-accent text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm">COACH</span>
+                        <h4 class="font-display font-bold text-2xl text-white mt-1">LUCHO</h4>
+                    </div>
+                    <ul class="flex flex-col gap-1">
+                        <li class="text-white/80 text-xs font-body">🎂 <span class="text-white/50">Edad</span> — 43 años</li>
+                        <li class="text-white/80 text-xs font-body">🎨 <span class="text-white/50">Color</span> — Azul</li>
+                        <li class="text-white/80 text-xs font-body">🍽️ <span class="text-white/50">Comida</span> — Asado</li>
+                        <li class="text-white/80 text-xs font-body">⭐ <span class="text-white/50">Fav</span> — Muscle Up</li>
+                        <li class="text-white/80 text-xs font-body">💀 <span class="text-white/50">Odiando</span> — Correr</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Team Member: Rafa -->
+            <article class="relative flex-shrink-0 w-[65vw] sm:w-[220px] md:w-[250px] aspect-[1/2] overflow-hidden snap-start group cursor-pointer rounded-lg">
+                <img src="/images/rafa.webp" alt="Rafa" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" decoding="async" width="800" height="1400"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <!-- Amarillo Fosfi -->
+                <div class="absolute top-4 right-4 w-5 h-5 rounded-full border-2 border-white/60 shadow-sm" style="background-color: #E0FF00;"></div>
+                <div class="absolute bottom-0 left-0 w-full p-5 flex flex-col items-start transition-opacity duration-300 group-hover:opacity-0">
+                    <span class="bg-white text-accent text-[10px] md:text-xs font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm mb-1">COACH</span>
+                    <h4 class="font-display font-bold text-3xl text-white">RAFA</h4>
+                    <p class="font-body text-sm text-white leading-snug mt-2">Siempre se puede un poco más</p>
+                </div>
+                <div class="absolute bottom-0 left-0 w-full bg-primary/95 translate-y-full group-hover:translate-y-0 transition-transform duration-400 ease-out p-5 flex flex-col gap-3">
+                    <div>
+                        <span class="bg-white text-accent text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm">COACH</span>
+                        <h4 class="font-display font-bold text-2xl text-white mt-1">RAFA</h4>
+                    </div>
+                    <ul class="flex flex-col gap-1">
+                        <li class="text-white/80 text-xs font-body">🎨 <span class="text-white/50">Color</span> — Amarillo fosfi</li>
+                        <li class="text-white/80 text-xs font-body">🍽️ <span class="text-white/50">Comida</span> — Canelones</li>
+                        <li class="text-white/80 text-xs font-body">⭐ <span class="text-white/50">Fav</span> — BMU</li>
+                        <li class="text-white/80 text-xs font-body">💀 <span class="text-white/50">Odiando</span> — Wall Walk</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Team Member: Manu -->
+            <article class="relative flex-shrink-0 w-[65vw] sm:w-[220px] md:w-[250px] aspect-[1/2] overflow-hidden snap-start group cursor-pointer rounded-lg">
+                <img src="/images/manu.webp" alt="Manu" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" decoding="async" width="800" height="1400"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute top-4 right-4 w-5 h-5 rounded-full border-2 border-white/60 shadow-sm" style="background-color: #E74C3C;"></div>
+                <div class="absolute bottom-0 left-0 w-full p-5 flex flex-col items-start transition-opacity duration-300 group-hover:opacity-0">
+                    <span class="bg-white text-accent text-[10px] md:text-xs font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm mb-1">COACH</span>
+                    <h4 class="font-display font-bold text-3xl text-white">MANU</h4>
+                    <p class="font-body text-sm text-white leading-snug mt-2">El éxito no es ser el mejor, sino ser hoy mejor de lo que fuiste ayer.</p>
+                </div>
+                <div class="absolute bottom-0 left-0 w-full bg-primary/95 translate-y-full group-hover:translate-y-0 transition-transform duration-400 ease-out p-5 flex flex-col gap-3">
+                    <div>
+                        <span class="bg-white text-accent text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm">COACH</span>
+                        <h4 class="font-display font-bold text-2xl text-white mt-1">MANU</h4>
+                    </div>
+                    <ul class="flex flex-col gap-1">
+                        <li class="text-white/80 text-xs font-body">🎂 <span class="text-white/50">Edad</span> — 33 años</li>
+                        <li class="text-white/80 text-xs font-body">🎨 <span class="text-white/50">Color</span> — Rojo</li>
+                        <li class="text-white/80 text-xs font-body">🍽️ <span class="text-white/50">Comida</span> — Pasta</li>
+                        <li class="text-white/80 text-xs font-body">⭐ <span class="text-white/50">Fav</span> — Clean y Snatch, siempre a power!</li>
+                        <li class="text-white/80 text-xs font-body">💀 <span class="text-white/50">Odiando</span> — burpeeees</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Team Member: Javi -->
+            <article class="relative flex-shrink-0 w-[65vw] sm:w-[220px] md:w-[250px] aspect-[1/2] overflow-hidden snap-start group cursor-pointer rounded-lg">
+                <img src="/images/javi.webp" alt="Javi" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" decoding="async" width="800" height="1400"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute top-4 right-4 w-5 h-5 rounded-full border-2 border-white/60 shadow-sm" style="background-color: #1a1a1a;"></div>
+                <div class="absolute bottom-0 left-0 w-full p-5 flex flex-col items-start transition-opacity duration-300 group-hover:opacity-0">
+                    <span class="bg-white text-accent text-[10px] md:text-xs font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm mb-1">NUTRICIONISTA</span>
+                    <h4 class="font-display font-bold text-3xl text-white">JAVI</h4>
+                </div>
+                <div class="absolute bottom-0 left-0 w-full bg-primary/95 translate-y-full group-hover:translate-y-0 transition-transform duration-400 ease-out p-5 flex flex-col gap-3">
+                    <div>
+                        <span class="bg-white text-accent text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm">NUTRICIONISTA</span>
+                        <h4 class="font-display font-bold text-2xl text-white mt-1">JAVI</h4>
+                    </div>
+                    <ul class="flex flex-col gap-1">
+                        <li class="text-white/80 text-xs font-body">🎂 <span class="text-white/50">Edad</span> — 28 años</li>
+                        <li class="text-white/80 text-xs font-body">🎨 <span class="text-white/50">Color</span> — Negro</li>
+                        <li class="text-white/80 text-xs font-body">🍽️ <span class="text-white/50">Comida</span> — Lentejas con arroz</li>
+                        <li class="text-white/80 text-xs font-body">⭐ <span class="text-white/50">Fav</span> — Taekwondo</li>
+                        <li class="text-white/80 text-xs font-body">💀 <span class="text-white/50">Odiando</span> — Press de banca</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Team Member: Cristina -->
+            <article class="relative flex-shrink-0 w-[65vw] sm:w-[220px] md:w-[250px] aspect-[1/2] overflow-hidden snap-start rounded-lg">
+                <img src="/images/cristina.webp" alt="Cristina" class="w-full h-full object-cover" loading="lazy" decoding="async" width="800" height="1400"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute top-4 right-4 w-5 h-5 rounded-full border-2 border-white/60 shadow-sm" style="background-color: #E91E8C;"></div>
+                <div class="absolute bottom-0 left-0 w-full p-5 flex flex-col items-start">
+                    <span class="bg-white text-accent text-[10px] md:text-xs font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm mb-1">COACH CASOS ESPECIALES</span>
+                    <h4 class="font-display font-bold text-3xl text-white">CRISTINA</h4>
+                </div>
+            </article>
+
+            <!-- Team Member: Sara -->
+            <article class="relative flex-shrink-0 w-[65vw] sm:w-[220px] md:w-[250px] aspect-[1/2] overflow-hidden snap-start group cursor-pointer rounded-lg">
+                <img src="/images/sara.webp" alt="Sara" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" decoding="async" width="800" height="1400"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute top-4 right-4 w-5 h-5 rounded-full border-2 border-white/60 shadow-sm" style="background-color: #131D2D;"></div>
+                <div class="absolute bottom-0 left-0 w-full p-5 flex flex-col items-start transition-opacity duration-300 group-hover:opacity-0">
+                    <span class="bg-white text-accent text-[10px] md:text-xs font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm mb-1">PSICÓLOGA DEPORTIVA</span>
+                    <h4 class="font-display font-bold text-3xl text-white">SARA</h4>
+                    <p class="font-body text-sm text-white leading-snug mt-2">Una pequeña reflexión puede ser una gran revolución</p>
+                </div>
+                <div class="absolute bottom-0 left-0 w-full bg-primary/95 translate-y-full group-hover:translate-y-0 transition-transform duration-400 ease-out p-5 flex flex-col gap-3">
+                    <div>
+                        <span class="bg-white text-accent text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm">PSICÓLOGA DEPORTIVA</span>
+                        <h4 class="font-display font-bold text-2xl text-white mt-1">SARA</h4>
+                    </div>
+                    <ul class="flex flex-col gap-1">
+                        <li class="text-white/80 text-xs font-body">🎂 <span class="text-white/50">Edad</span> — 25 años</li>
+                        <li class="text-white/80 text-xs font-body">🎨 <span class="text-white/50">Color</span> — Azul marino</li>
+                        <li class="text-white/80 text-xs font-body">🍽️ <span class="text-white/50">Comida</span> — Tortilla de patata</li>
+                        <li class="text-white/80 text-xs font-body">⭐ <span class="text-white/50">Fav</span> — Snatch</li>
+                        <li class="text-white/80 text-xs font-body">💀 <span class="text-white/50">Odiando</span> — Zancada OH</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Team Member: Cora -->
+            <article class="relative flex-shrink-0 w-[65vw] sm:w-[220px] md:w-[250px] aspect-[1/2] overflow-hidden snap-start group cursor-pointer rounded-lg">
+                <img src="/images/cora.webp" alt="Cora" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" decoding="async" width="800" height="1400"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute top-4 right-4 w-5 h-5 rounded-full border-2 border-white/60 shadow-sm" style="background-color: #FF7F7F;"></div>
+                <div class="absolute bottom-0 left-0 w-full p-5 flex flex-col items-start transition-opacity duration-300 group-hover:opacity-0">
+                    <span class="bg-white text-accent text-[10px] md:text-xs font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm mb-1">FISIOTERAPEUTA</span>
+                    <h4 class="font-display font-bold text-3xl text-white">CORA</h4>
+                    <p class="font-body text-sm text-white leading-snug mt-2">Ponle alma a todo lo que hagas</p>
+                </div>
+                <div class="absolute bottom-0 left-0 w-full bg-primary/95 translate-y-full group-hover:translate-y-0 transition-transform duration-400 ease-out p-5 flex flex-col gap-3">
+                    <div>
+                        <span class="bg-white text-accent text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm">FISIOTERAPEUTA</span>
+                        <h4 class="font-display font-bold text-2xl text-white mt-1">CORA</h4>
+                    </div>
+                    <ul class="flex flex-col gap-1">
+                        <li class="text-white/80 text-xs font-body">🎂 <span class="text-white/50">Edad</span> — 31 años</li>
+                        <li class="text-white/80 text-xs font-body">🎨 <span class="text-white/50">Color</span> — Coral</li>
+                        <li class="text-white/80 text-xs font-body">🍽️ <span class="text-white/50">Comida</span> — Spaghetti a la carbonara</li>
+                        <li class="text-white/80 text-xs font-body">⭐ <span class="text-white/50">Fav</span> — BMU</li>
+                        <li class="text-white/80 text-xs font-body">💀 <span class="text-white/50">Odiando</span> — Assault bike</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Team Member: María -->
+            <article class="relative flex-shrink-0 w-[65vw] sm:w-[220px] md:w-[250px] aspect-[1/2] overflow-hidden snap-start group cursor-pointer rounded-lg">
+                <img src="/images/maria.webp" alt="María" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" decoding="async" width="800" height="1400"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute top-4 right-4 w-5 h-5 rounded-full border-2 border-white/60 shadow-sm" style="background-color: #27AE60;"></div>
+                <div class="absolute bottom-0 left-0 w-full p-5 flex flex-col items-start transition-opacity duration-300 group-hover:opacity-0">
+                    <span class="bg-white text-accent text-[10px] md:text-xs font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm mb-1">COACH</span>
+                    <h4 class="font-display font-bold text-3xl text-white">MARÍA</h4>
+                    <p class="font-body text-sm text-white leading-snug mt-2">Nada se pierde, todo se transforma</p>
+                </div>
+                <div class="absolute bottom-0 left-0 w-full bg-primary/95 translate-y-full group-hover:translate-y-0 transition-transform duration-400 ease-out p-5 flex flex-col gap-3">
+                    <div>
+                        <span class="bg-white text-accent text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm">COACH</span>
+                        <h4 class="font-display font-bold text-2xl text-white mt-1">MARÍA</h4>
+                    </div>
+                    <ul class="flex flex-col gap-1">
+                        <li class="text-white/80 text-xs font-body">🎂 <span class="text-white/50">Edad</span> — 25 años</li>
+                        <li class="text-white/80 text-xs font-body">🎨 <span class="text-white/50">Color</span> — Verde</li>
+                        <li class="text-white/80 text-xs font-body">🍽️ <span class="text-white/50">Comida</span> — Spaghetti al pesto</li>
+                        <li class="text-white/80 text-xs font-body">⭐ <span class="text-white/50">Fav</span> — Bailar y los burpees</li>
+                        <li class="text-white/80 text-xs font-body">💀 <span class="text-white/50">Odiando</span> — Snatch</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Team Member: Ester -->
+            <article class="relative flex-shrink-0 w-[65vw] sm:w-[220px] md:w-[250px] aspect-[1/2] overflow-hidden snap-start group cursor-pointer rounded-lg">
+                <img src="/images/ester.webp" alt="Ester" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" decoding="async" width="800" height="1400"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute top-4 right-4 w-5 h-5 rounded-full border-2 border-white/60 shadow-sm" style="background-color: #E74C3C;"></div>
+                <div class="absolute bottom-0 left-0 w-full p-5 flex flex-col items-start transition-opacity duration-300 group-hover:opacity-0">
+                    <span class="bg-white text-accent text-[10px] md:text-xs font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm mb-1">COACH</span>
+                    <h4 class="font-display font-bold text-3xl text-white">ESTER</h4>
+                    <p class="font-body text-sm text-white leading-snug mt-2">No quiero salir a correr. No estoy en atletismo</p>
+                </div>
+                <div class="absolute bottom-0 left-0 w-full bg-primary/95 translate-y-full group-hover:translate-y-0 transition-transform duration-400 ease-out p-5 flex flex-col gap-3">
+                    <div>
+                        <span class="bg-white text-accent text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm">COACH</span>
+                        <h4 class="font-display font-bold text-2xl text-white mt-1">ESTER</h4>
+                    </div>
+                    <ul class="flex flex-col gap-1">
+                        <li class="text-white/80 text-xs font-body">🎂 <span class="text-white/50">Edad</span> — 33 años</li>
+                        <li class="text-white/80 text-xs font-body">🎨 <span class="text-white/50">Color</span> — Rojo</li>
+                        <li class="text-white/80 text-xs font-body">🍽️ <span class="text-white/50">Comida</span> — Lentejas</li>
+                        <li class="text-white/80 text-xs font-body">⭐ <span class="text-white/50">Fav</span> — Squat Snatch</li>
+                        <li class="text-white/80 text-xs font-body">💀 <span class="text-white/50">Odiando</span> — Burpee</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Team Member: Sandra -->
+            <article class="relative flex-shrink-0 w-[65vw] sm:w-[220px] md:w-[250px] aspect-[1/2] overflow-hidden snap-start group cursor-pointer rounded-lg">
+                <img src="/images/sandra.webp" alt="Sandra Domínguez" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" decoding="async" width="800" height="1433"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute top-4 right-4 w-5 h-5 rounded-full border-2 border-white/60 shadow-sm" style="background-color: #FF007F;"></div>
+                <div class="absolute bottom-0 left-0 w-full p-5 flex flex-col items-start transition-opacity duration-300 group-hover:opacity-0">
+                    <span class="bg-white text-accent text-[10px] md:text-xs font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm mb-1">COACH</span>
+                    <h4 class="font-display font-bold text-3xl text-white">SANDRA</h4>
+                    <p class="font-body text-sm text-white leading-snug mt-2">Como mínimo, da al máximo</p>
+                </div>
+                <div class="absolute bottom-0 left-0 w-full bg-primary/95 translate-y-full group-hover:translate-y-0 transition-transform duration-400 ease-out p-5 flex flex-col gap-3">
+                    <div>
+                        <span class="bg-white text-accent text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm">COACH</span>
+                        <h4 class="font-display font-bold text-2xl text-white mt-1">SANDRA</h4>
+                    </div>
+                    <ul class="flex flex-col gap-1">
+                        <li class="text-white/80 text-xs font-body">🎂 <span class="text-white/50">Edad</span> — 36 años</li>
+                        <li class="text-white/80 text-xs font-body">🎨 <span class="text-white/50">Color</span> — Fucsia</li>
+                        <li class="text-white/80 text-xs font-body">🍽️ <span class="text-white/50">Comida</span> — Arroz al horno</li>
+                        <li class="text-white/80 text-xs font-body">⭐ <span class="text-white/50">Fav</span> — Snatch</li>
+                        <li class="text-white/80 text-xs font-body">💀 <span class="text-white/50">Odiando</span> — Correr</li>
+                    </ul>
+                </div>
+            </article>
+
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .duration-400 {
+        transition-duration: 400ms;
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const teamSlider = document.getElementById('team-slider');
+        const teamPrevBtn = document.getElementById('team-prev');
+        const teamNextBtn = document.getElementById('team-next');
+
+        if (teamSlider && teamPrevBtn && teamNextBtn) {
+            teamPrevBtn.addEventListener('click', () => {
+                const scrollAmount = teamSlider.firstElementChild.clientWidth + 16;
+                teamSlider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            });
+
+            teamNextBtn.addEventListener('click', () => {
+                const scrollAmount = teamSlider.firstElementChild.clientWidth + 16;
+                teamSlider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            });
+        }
+    });
+</script>

@@ -1,0 +1,233 @@
+---
+// src/components/MoncadaSchedule.astro
+---
+<section id="horarios" class="w-full bg-white pt-16 md:pt-24 pb-0 px-4 md:px-8 lg:px-24 xl:px-32 flex flex-col items-center">
+    <div class="w-full max-w-[1240px] overflow-hidden">
+        <!-- Header -->
+        <h2 class="font-display font-bold text-5xl md:text-7xl uppercase text-primary mb-0">
+            HORARIO
+        </h2>
+        <div class="w-16 h-1 bg-accent rounded-full mt-0 mb-10"></div>
+
+        <!-- WodBuster Calendar Widget -->
+        <div id="wodbuster-calendar-moncada"></div>
+    </div>
+</section>
+
+<script is:inline src="https://taronjamoncada.wodbuster.com/js/calendar.es5.min.js"></script>
+
+<style is:global>
+    h2, h3, h4 { font-family: 'Bebas Neue', sans-serif; }
+
+    /* ── CONTENEDOR GENERAL ── */
+    #WodBusterCalendar {
+        font-family: 'Open Sans', sans-serif !important;
+        color: #1a2233 !important;
+        background-color: #ffffff !important;
+        max-width: 1240px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        box-sizing: border-box !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    /* ── OCULTAR TÍTULO Y LÍNEA PROPIOS DE WODBUSTER ── */
+    #WodBusterCalendar > p,
+    #WodBusterCalendar > h1,
+    #WodBusterCalendar > h2,
+    #WodBusterCalendar > h3,
+    #WodBusterCalendar > hr,
+    #WodBusterCalendar > br,
+    #WodBusterCalendar [class*="titulo"],
+    #WodBusterCalendar [class*="title"],
+    #WodBusterCalendar [class*="header"],
+    #WodBusterCalendar [class*="cabecera"] {
+        display: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        height: 0 !important;
+        line-height: 0 !important;
+        font-size: 0 !important;
+        overflow: hidden !important;
+    }
+
+    /* ── ELIMINAR PADDING/MARGIN INTERNO DEL WIDGET ── */
+    #WodBusterCalendar > div:first-child,
+    #WodBusterCalendar > div,
+    #WodBusterCalendar > div > div:first-child,
+    #WodBusterCalendar > div > *:first-child {
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+    }
+    #WodBusterCalendar table {
+        margin-top: 0 !important;
+    }
+
+    /* ── TABLA BASE ── */
+    #WodBusterCalendar table {
+        width: 100% !important;
+        border-collapse: separate !important;
+        border-spacing: 0 !important;
+        background-color: #f8f9fb !important;
+        border-radius: 12px !important;
+        overflow: hidden !important;
+        box-shadow: 0 2px 24px rgba(19, 29, 45, 0.07) !important;
+    }
+
+    /* ── CABECERAS (Lunes, Martes...) ── */
+    #WodBusterCalendar table th {
+        background-color: #131D2D !important;
+        color: #ffffff !important;
+        font-family: 'Open Sans', sans-serif !important;
+        font-weight: 700 !important;
+        font-size: 0.75rem !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.12em !important;
+        border: none !important;
+        border-right: 1px solid rgba(255,255,255,0.06) !important;
+        padding: 1.1rem 0.5rem !important;
+        text-align: center !important;
+    }
+    #WodBusterCalendar table th:first-child {
+        background-color: #0A111A !important;
+    }
+    #WodBusterCalendar table th:last-child {
+        border-right: none !important;
+    }
+
+    /* ── CELDAS ── */
+    #WodBusterCalendar table td {
+        background-color: #ffffff !important;
+        border: none !important;
+        border-right: 1px solid rgba(19, 29, 45, 0.06) !important;
+        border-bottom: 1px solid rgba(19, 29, 45, 0.06) !important;
+        padding: 0.85rem 0.5rem !important;
+        vertical-align: middle !important;
+        text-align: center !important;
+        transition: background-color 0.15s ease !important;
+    }
+    #WodBusterCalendar table tr:nth-child(even) td {
+        background-color: #f8f9fb !important;
+    }
+    #WodBusterCalendar table td:first-child {
+        background-color: #f0f2f5 !important;
+        font-weight: 700 !important;
+        font-size: 0.8rem !important;
+        color: #131D2D !important;
+        letter-spacing: 0.04em !important;
+    }
+    #WodBusterCalendar table tr:nth-child(even) td:first-child {
+        background-color: #e8eaee !important;
+    }
+    #WodBusterCalendar table td:last-child {
+        border-right: none !important;
+    }
+    #WodBusterCalendar table tr:last-child td {
+        border-bottom: none !important;
+    }
+    #WodBusterCalendar table td:not(:first-child):hover {
+        background-color: rgba(217, 106, 62, 0.06) !important;
+    }
+
+    /* ── NEUTRALIZAR TODOS LOS DIVS CON COLORES DINÁMICOS (ide24, ide25...) ── */
+    #WodBusterCalendar table td div,
+    #WodBusterCalendar table td div[class^="ide"],
+    #WodBusterCalendar table td div[class*="ide"],
+    #WodBusterCalendar table td span {
+        background-color: transparent !important;
+        background: none !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        border: none !important;
+        color: #131D2D !important;
+    }
+
+    /* ── HORA DE LA CLASE ── */
+    #WodBusterCalendar .hora,
+    #WodBusterCalendar .time,
+    #WodBusterCalendar [class*="hora"],
+    #WodBusterCalendar [class*="time"] {
+        color: #D96A3E !important;
+        font-family: 'Open Sans', sans-serif !important;
+        font-weight: 700 !important;
+        font-size: 0.7rem !important;
+        background: transparent !important;
+        display: block !important;
+        letter-spacing: 0.04em !important;
+    }
+
+    /* ── NOMBRE DE LA CLASE ── */
+    #WodBusterCalendar .nombre,
+    #WodBusterCalendar .actividad,
+    #WodBusterCalendar [class*="nombre"],
+    #WodBusterCalendar [class*="actividad"] {
+        color: #131D2D !important;
+        font-family: 'Bebas Neue', sans-serif !important;
+        font-size: 1.25rem !important;
+        font-weight: 700 !important;
+        text-transform: capitalize !important;
+        letter-spacing: 0.04em !important;
+        background: transparent !important;
+        line-height: 1.15 !important;
+        display: block !important;
+    }
+
+    /* ── BOTONES DE NAVEGACIÓN (semana anterior/siguiente) ── */
+    #WodBusterCalendar button,
+    #WodBusterCalendar input[type="button"] {
+        background-color: #131D2D !important;
+        color: #ffffff !important;
+        border: none !important;
+        border-radius: 6px !important;
+        font-family: 'Open Sans', sans-serif !important;
+        font-weight: 700 !important;
+        font-size: 0.7rem !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.1em !important;
+        padding: 0.5rem 1.2rem !important;
+        cursor: pointer !important;
+        box-shadow: none !important;
+        transition: background-color 0.15s ease !important;
+    }
+    #WodBusterCalendar button:hover,
+    #WodBusterCalendar input[type="button"]:hover {
+        background-color: #D96A3E !important;
+    }
+
+    /* ── TÍTULO DE SEMANA ── */
+    #WodBusterCalendar .titulo,
+    #WodBusterCalendar [class*="titulo"],
+    #WodBusterCalendar [class*="title"],
+    #WodBusterCalendar [class*="semana"] {
+        font-family: 'Bebas Neue', sans-serif !important;
+        font-size: 1.6rem !important;
+        color: #131D2D !important;
+        letter-spacing: 0.06em !important;
+        background: transparent !important;
+    }
+
+    /* ── ENLACES DE RESERVA ── */
+    #WodBusterCalendar a {
+        background-color: #D96A3E !important;
+        color: #ffffff !important;
+        font-family: 'Open Sans', sans-serif !important;
+        font-weight: 700 !important;
+        font-size: 0.6rem !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.1em !important;
+        padding: 0.35rem 0.8rem !important;
+        border-radius: 4px !important;
+        text-decoration: none !important;
+        display: inline-block !important;
+        border: none !important;
+        box-shadow: 0 2px 6px rgba(217, 106, 62, 0.3) !important;
+        transition: background-color 0.15s ease, box-shadow 0.15s ease !important;
+    }
+    #WodBusterCalendar a:hover {
+        background-color: #131D2D !important;
+        box-shadow: none !important;
+    }
+</style>

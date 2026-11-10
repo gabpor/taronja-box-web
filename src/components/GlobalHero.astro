@@ -1,0 +1,56 @@
+---
+// src/components/GlobalHero.astro
+---
+<section id="filosofia" class="w-full flex flex-col">
+    <!-- Hero Image Area -->
+    <div class="relative w-full h-[70vh] md:h-[78vh] flex flex-col justify-end overflow-hidden bg-primary-dark">
+        <!-- Background Video -->
+        <video
+            class="absolute inset-0 w-full h-full object-cover"
+            src="/images/video-web.mp4"
+            autoplay
+            loop
+            muted
+            playsinline
+        ></video>
+        <!-- Blue Semi-transparent Overlay -->
+        <div class="absolute inset-0 bg-primary/70"></div>
+
+        <!-- Overlapping Title at Bottom of Image -->
+        <div class="relative z-10 w-full px-4 md:px-8 lg:px-24 xl:px-32 pb-0">
+            <h1 class="text-left font-display font-bold uppercase text-white leading-[0.85] tracking-normal inline-block" style="font-size: clamp(5.5rem, 11vw, 15rem);">
+                VIVE TU HISTORIA.
+            </h1>
+        </div>
+    </div>
+
+    <!-- Content below Hero - White Background -->
+    <div class="w-full bg-white text-primary flex justify-center px-4 pt-2 md:pt-4 pb-6 md:pb-8 lg:pb-12 md:px-8 lg:px-24 xl:px-32">
+        <div class="w-full flex flex-col items-start">
+            <!-- Orange Subtitle -->
+            <h2 class="text-left font-display font-bold uppercase text-accent leading-[0.85] tracking-normal mb-8 inline-block" style="font-size: clamp(5.5rem, 11vw, 12rem);">
+                ESCRIBELA ENTRENANDO
+            </h2>
+            
+            <!-- Body Text -->
+            <div class="w-full flex flex-col items-start md:pl-2 pt-6 md:pt-12">
+                <p class="font-body text-sm md:text-base lg:text-lg text-primary/80 leading-relaxed max-w-3xl text-left font-medium">
+                    20 años trabajando al servicio de cuidar la salud de las personas, dan para mucho. Cada alumno, cada atleta, cada cliente que ha venido a vernos, nos ha dado la respuesta de por qué nos dedicamos a esto desde 2006.
+                </p>
+                <p class="font-body text-sm md:text-base lg:text-lg text-primary/80 leading-relaxed max-w-3xl text-left font-medium mt-4">
+                    Ahora, ha llegado tu momento para subir de nivel en nuestro ecosistema de entrenamiento funcional y alto rendimiento en Valencia. Entrenamos Open Box, clases dirigidas y especialidades con un equipo multidisciplinar para mejorar tu bienestar.
+                </p>
+
+                <!-- "Saber más" Button -->
+                <div class="mt-4 md:mt-10">
+                    <a href="/about" class="inline-flex items-center gap-2 md:gap-4 bg-[#fff5f0] text-accent px-4 md:px-8 py-2 md:py-2.5 rounded-md font-body font-bold text-xs md:text-sm uppercase tracking-[0.15em] hover:bg-accent/10 transition-all group">
+                        Saber más
+                        <svg class="w-4 h-4 md:w-5 md:h-5 transition-transform group-hover:translate-x-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,92 @@
+/*
+ * src/styles/global.css
+ * ─────────────────────────────────────────────────────────
+ * Sistema de Diseño "Dark Taronja" — CSS Custom Properties
+ * Tokens semánticos en formato HSL para integración nativa
+ * con Tailwind CSS bg-primary, text-accent, etc.
+ * ─────────────────────────────────────────────────────────
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  :root {
+    /* ── Paleta Primary (Dark Mode Background) ─────────────── */
+    /* #131D2D → HSL(214, 43%, 12%) */
+    --color-primary: 214 43% 12%;
+    --color-primary-50: 214 20% 92%;
+    --color-primary-100: 214 22% 81%;
+    --color-primary-200: 214 18% 65%;
+    --color-primary-300: 214 23% 47%;
+    --color-primary-400: 214 31% 32%;
+    --color-primary-500: 214 39% 20%;
+    --color-primary-600: 214 43% 12%;
+    /* DEFAULT = #131D2D */
+    --color-primary-700: 214 45% 9%;
+    --color-primary-800: 214 48% 6%;
+    --color-primary-900: 214 50% 3%;
+
+    /* ── Paleta Accent (Taronja / Naranja CTA) ─────────────── */
+    /* #D96A3E → HSL(17, 66%, 55%) */
+    --color-accent: 17 66% 55%;
+    --color-accent-50: 17 80% 95%;
+    --color-accent-100: 17 72% 88%;
+    --color-accent-200: 17 65% 76%;
+    --color-accent-300: 17 60% 64%;
+    --color-accent-400: 17 66% 55%;
+    /* DEFAULT = #D96A3E */
+    --color-accent-500: 17 63% 48%;
+    --color-accent-600: 17 60% 39%;
+    --color-accent-700: 17 62% 31%;
+    --color-accent-800: 17 63% 23%;
+    --color-accent-900: 17 65% 15%;
+
+    /* ── Otros Tokens Semánticos ────────────────────────────── */
+    --color-secondary: 0 0% 100%;
+    /* #FFFFFF */
+    --color-surface: 214 43% 12%;
+    /* = primary, fondos base */
+    --color-surface-raised: 214 45% 9%;
+    /* cards/paneles elevados */
+    --color-border: 214 39% 20%;
+    /* bordes sutiles */
+    --color-text: 0 0% 100%;
+    /* texto principal (blanco) */
+    --color-text-muted: 0 0% 100%;
+    /* texto secundario (se usa con opacity) */
+
+    /* ── Radios y duraciones ────────────────────────────────── */
+    --radius-sm: 0.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.25rem;
+    --radius-2xl: 1.5rem;
+    --radius-full: 9999px;
+
+    --transition-fast: 150ms;
+    --transition-normal: 200ms;
+    --transition-slow: 300ms;
+  }
+
+  body {
+    background-color: theme('colors.primary');
+    color: #FFFFFF;
+    font-family: theme('fontFamily.body');
+  }
+
+  h1,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: theme('fontFamily.display');
+    letter-spacing: 0.03em;
+  }
+}
