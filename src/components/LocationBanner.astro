@@ -62,6 +62,11 @@
 <script>
   import { resolveLocation } from '../lib/geoRouting';
 
+  // DESACTIVADO: consultar un servicio de geo-IP envía la IP del visitante a un
+  // tercero (ipwho.is) sin consentimiento ni mención en la política de privacidad.
+  // Reactivar solo con aviso en la política y consentimiento previo.
+  const GEO_IP_ENABLED = false;
+
   const banner = document.getElementById('location-banner');
   const closeBtn = document.getElementById('location-banner-close');
   const textEl = document.getElementById('location-banner-text');
@@ -74,6 +79,7 @@
   });
 
   async function suggestNearestLocation() {
+    if (!GEO_IP_ENABLED) return;
     if (!banner || !textEl || !taglineEl || !ctaEl || !ctaTextEl) return;
 
     try {
