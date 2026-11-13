@@ -9,13 +9,13 @@ const isAbout = cleanPath === '/about';
 const origin = Astro.url.searchParams.get('origin');
 
 const sedesSublinks = [
-    { name: 'Valencia', href: '/valencia' },
-    { name: 'Massanassa', href: '/massanassa' },
-    { name: 'Moncada', href: '/moncada' }
+    { name: 'Valencia', href: '/valencia/' },
+    { name: 'Massanassa', href: '/massanassa/' },
+    { name: 'Moncada', href: '/moncada/' }
 ];
 
 const homeLinks = [
-    { name: 'Filosofía', href: '/about' },
+    { name: 'Filosofía', href: '/about/' },
     { name: 'Sedes', sublinks: sedesSublinks },
     { name: 'Servicios', href: '/#servicios' },
     { name: 'Equipo', href: '/#equipo' },
@@ -38,7 +38,7 @@ const sedeLinks = [
     { name: 'Servicios', href: '/#servicios' },
     { name: 'Horarios', href: `${baseSedePath}#horarios` },
     { name: 'Tarifas', href: `${baseSedePath}#precios` },
-    { name: 'Filosofía', href: `/about?origin=${isSedePage ? currentSede : (origin || 'sede')}` }
+    { name: 'Filosofía', href: `/about/?origin=${isSedePage ? currentSede : (origin || 'sede')}` }
 ];
 
 const links = isSedeMode ? sedeLinks : homeLinks;

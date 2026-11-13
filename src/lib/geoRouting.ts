@@ -31,7 +31,7 @@ export const LOCATIONS: Record<LocationKey, TaronjaLocation> = {
     valencia: {
         key: 'valencia',
         label: 'Valencia',
-        href: '/valencia',
+        href: '/valencia/',
         tagline: 'Box de entrenamiento en el centro de Valencia',
         lat: 39.4699,
         lon: -0.3763,
@@ -39,7 +39,7 @@ export const LOCATIONS: Record<LocationKey, TaronjaLocation> = {
     moncada: {
         key: 'moncada',
         label: 'Moncada',
-        href: '/moncada',
+        href: '/moncada/',
         tagline: 'Tu hub de alto rendimiento en Moncada',
         lat: 39.5784,
         lon: -0.3960,
@@ -47,7 +47,7 @@ export const LOCATIONS: Record<LocationKey, TaronjaLocation> = {
     massanasa: {
         key: 'massanasa',
         label: 'Massanasa',
-        href: '/massanassa',
+        href: '/massanassa/',
         tagline: 'Cross training de élite en l\'Horta Sud',
         lat: 39.4019,
         lon: -0.4012,
