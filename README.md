@@ -1,4 +1,4 @@
-# Taronja Box — sitio web multisede
+# Taronja Box - sitio web multisede
 
 Sitio web de [Taronja Box](https://taronjabox.com), un box de CrossTraining con tres sedes (Valencia, Moncada y Massanassa), construido como sitio estático con Astro y Tailwind para un alojamiento básico, con una página, unos datos estructurados y unas preguntas frecuentes propias para cada sede. Está en producción en taronjabox.com y este repositorio es la copia publicable del código.
 
