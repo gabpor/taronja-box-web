@@ -68,14 +68,6 @@ npm run build    # salida estática en dist/
 
 Las imágenes y vídeos del cliente (aparecen personas, incluidos menores) no están en el repositorio, por lo que en local el sitio se ve sin fotos, sin logo y sin imagen para redes; el build no se ve afectado.
 
-## Límites conocidos y por dónde seguiría
-
-- **Pendiente de desplegar:** el sitio publicado todavía no sirve `sitemap.xml` ni `robots.txt` (ambos devolvían 404 el 13 de noviembre de 2026) y declara el `canonical` sin barra final (`/valencia`) mientras el servidor redirige a `/valencia/`. Esta versión del código ya genera el sitemap con `@astrojs/sitemap`, incluye `robots.txt` y usa barra final en el `canonical`, los enlaces internos y los datos estructurados, pero esos tres puntos seguirán como estaban en producción hasta que se suba esta versión.
-- **Duplicación entre sedes:** `ValenciaPricing` y `MassanassaPricing` se diferencian en 39 de 258 líneas. Extraer un componente con los datos de cada sede sería el primer refactor.
-- **9 errores en `npx astro check`:** son comprobaciones de nulos en los scripts de cliente (`PricingSection`, `ServicesGrid` y `TeamSection`); el build pasa porque no incluye esa comprobación.
-- **Sin pruebas automáticas ni integración continua.**
-- **Dos componentes sin uso** (`PricingSection` y `SedeGalleryCarousel`) y dos grafías de la misma localidad (`massanasa` en `geoRouting.ts`, `massanassa` en las rutas).
-
 ## Licencia
 
 Todos los derechos reservados: el código se publica para poder consultarlo, y la marca, los textos y los precios son de Taronja Box. Las tipografías de `public/fonts/` mantienen su licencia SIL OFL. El detalle está en [LICENSE](LICENSE).
