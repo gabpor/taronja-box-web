@@ -38,7 +38,7 @@ flowchart TD
 
 ## Cómo se hizo (uso de IA)
 
-Trabajé con Claude Code (agentes planificador, implementador y revisor). Yo definí el alcance, la estructura por sedes y las decisiones de SEO, y revisé el resultado; buena parte del código de las páginas lo generó la IA a partir de esas especificaciones. En el historial quedan dos ajustes posteriores a la primera versión, `d17c7f9` (textos legales alineados con lo que el sitio hace) y `2181295` (fuentes autoalojadas y sin Cloudflare en la política de cookies). Este repositorio no incluye el historial anterior.
+Trabajé con Claude Code (agentes planificador, implementador y revisor). Yo definí el alcance, la estructura por sedes y las decisiones de SEO, y revisé el resultado; buena parte del código de las páginas lo generó la IA a partir de esas especificaciones. Tras la primera versión hubo dos ajustes: alinear los textos legales con lo que el sitio hace y autoalojar las fuentes, sin Cloudflare en la política de cookies. Este repositorio no incluye el historial anterior.
 
 ## Comprobado el 13 de noviembre de 2026
 

@@ -33,3 +33,6 @@ public/images/
 # Temporales de Cloudflare Wrangler y de herramientas locales
 .wrangler/
 .claudeignore
+# Configuración personal de Claude Code (no es del proyecto)
+CLAUDE.md
+scripts/init.sh
